@@ -250,10 +250,10 @@ The outcome is calculated by combining the scores from the *Importance* and *Fea
 &nbsp;
 
 # Marketing
-Ventdes has no online presence at all. Part of builiding that image is to expoese the company to social media platforms.
-It will allow the company to engage with potential customers and build a trusted image.
+Ventdes has no online presence at all. Part of builiding company's digital image is to expoese it to various social media platforms.
+It will allow the company to grow its digital community, engage with potential customers and build trust.
 
-Kukladev recommends to build Facebook page [Ventdes](https://www.facebook.com/Ventdes-102647435969280 "Ventdes") first, and then expand its presence to the other social media:
+Kukladev recommends to create a Facebook page [Ventdes](https://www.facebook.com/Ventdes-102647435969280 "Ventdes") first, and then expand its presence to the other social media platforms:
 * [Instagram](https://www.instagram.com/ "Instagram")
 * [Pinterest](https://www.pinterest.ie/ "Pinterest")
 * [LinkedIn](https://www.linkedin.com/ "LinkedIn")
