@@ -276,11 +276,14 @@ Kukladev recommends to create a Facebook page [Ventdes](https://www.facebook.com
 * Sign Up
 ![Sign Up](docs/wireframes/signup.png "Sign Up")
 
-* View Hazards
-![View Hazards](docs/wireframes/view-hazards.png "View Hazards")
+* Products List
+![Products List](docs/wireframes/products-list.png "Products List")
 
-* Record Hazard
-![Record Hazard](docs/wireframes/record-hazard.png "Record Hazard")
+* Product Details
+![Product Details](docs/wireframes/product-details.png "Product Details")
+
+* Cart
+![Cart](docs/wireframes/cart.png "Cart")
 
 \
 &nbsp;
@@ -292,13 +295,14 @@ Kukladev recommends to create a Facebook page [Ventdes](https://www.facebook.com
 
 ### Fonts
 
-Pinky and Brain have chosen Poppins fonts from Google Fonts library to be used throughout the project.
+Kukladeve has agreed with Ventdes to use following fonts from the Google Fonts library throughout the project.
 
-* Content & Headings - [Poppins](https://fonts.google.com/specimen/Poppins "Poppins")
+* Content & Headings - [Lato](https://fonts.google.com/specimen/Lato "Lato")
+* Category Titles - [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans "Josefin Sans")
 
 ### Colors
 
-Pinky and Brain have discussed various sets of colours and decided on a set of main colours that they want to be used for the project.
+Color palette has been discussed. Client would like to keep minimalist design, classic black and white color palette with minimal noise and distraction from the content. Ventdes agreed several sets of colours following cusotmer guidlines and requirements.
 
 &nbsp;
 
@@ -310,12 +314,13 @@ The colours will be used as described in the table below
 
 | Hex Value | Root variable name | Text | Button | Background | Opposite Colour
 | -- | -- | -- | -- | -- | --
-| #FFFFFF | white | X | X | X | black, burgundy
-| #000000 | black | X | X | X | white, pattens blue
-| #E1F2F7 | azure | X | X | X | black, green
-| #AE093B | burgundy | X | X | X | white
-| #E5BACE | pink | X | X | X| black
-| #004208 | green | X | X | X| white, azure
+| #FFFFFF | white | X | X | X | black
+| #222222 | black | X | X | X | white
+| #666666 | grey-1 | X | X | X | white
+| #737373 | grey-2 | X | X | X | white
+| #B11841 | amaranth | X | X | X | white
+| #DDDDDD | light-grey-1 | X | X | X | black
+| #F4F4F4 | light-grey-2 | X | X | X | black
 
 &nbsp;
 
@@ -323,27 +328,24 @@ All of the desired colour combinations have passed the [WebAIM Contrast Checker]
 
 | Foreground | Background | Results
 | -- | -- | --
-| black | pattens blue | [result](docs/designs/black-azure.png "result")
-| black | pink | [result](docs/designs/black-pink.png "result")
-| pattens blue | green | [result](docs/designs/azure-green.png "result")
-| white | burgundy | [result](docs/designs/white-burgundy.png "result")
-| white | green | [result](docs/designs/white-green.png "result")
-| black | white | [result](docs/designs/black-white.png "result")
+| black | white | [result](docs/designs/black.png "result")
+| grey-1 | white | [result](docs/designs/grey-1.png "result")
+| grey-2 | white | [result](docs/designs/grey-2.png "result")
+| amaranth | white | [result](docs/designs/amaranth.png "result")
+| white | light-grey-1 | [result](docs/designs/light-grey-1.png "result")
+| white | light-grey-2 | [result](docs/designs/light-grey-2.png "result")
 
 ### Images
-The only requirement was to ensure that any images used in the app will correspond to the subject of safety, security, work hazards and risks.
+Customer supplied all images for the website. Kukladev asked for the images to be in high resolution and that they will go through process of optimising the size and converting to into format used in the modern web design. There will be minimal or no loss of the image quality. Image will load faster and will follow Googles SEO guidlines.
 
 # Structure
 ## Site Structure and App Flow
 
-### Guest User
-![Unauthenticated User](docs/flows/ventdes-unauthenticated-user-flow.png)
+### Flow Chart Diagram
+![Flow Chart Diagram](docs/flows/ventdes-ecomm-flow.png "Ventdes E-Commerce Website Flow Chart")
 
-\
-&nbsp;
-
-### Authenticated User
-![Authenticated User](docs/flows/ventdes-authenticated-user-flow.png)
+### Website Structure
+![Website Structure](docs/flows/ventdes-ecomm-structure.png "Ventdes E-Commerce Website Structure")
 
 \
 &nbsp;
@@ -555,6 +557,7 @@ There are a few ideas that I would like to implement in the future:
 |PEP8|Validating python|[PEP8](http://pep8online.com/ "PEP8")|
 | Lucid | Site structure design | [Lucid](https://lucid.co/ "Lucid")|
 | Pexels | Images |[Pexels](https://pexels.com/ "Pexels")|
+| TinyIMG | Image conversion | [TinyIMG](https://tiny-img.com/webp/ "TinyIMG")|
 | TinyPng | Image optimisation | [TinyPNG](https://tinypng.com/ "TinyPNG")|
 | jpg2png.com | Image converter | [jpg2png](https://jpg2png.com/ "jpg2png")|
 | GitPod | Development environment |[Gitpod](https://www.gitpod.io/ "Gitpod")|
