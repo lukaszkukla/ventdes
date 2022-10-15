@@ -64,9 +64,9 @@ During this period, your database will become read-only. Once maintenance has co
 *We expect maintenance to last just a few moments depending on the size of your database. We will notify you when maintenance begins, and again once it's complete.*
 
 # Background
-Ventdes Ltd. is a business established in 2021 in the outskirts of Dublin, Republic of Ireland. Ventdes is a company dealing in the production and distribution of ventilation and air conditioning elements.
+Ventdes Ltd. is a business established in 2021 in the outskirts of Dublin, Republic of Ireland. Ventdes is a company dealing in the production and distribution of ventilation and air conditioning elements, accessories and systems.
 
-Ventdes helps its clients with experts advice in the selection of essential equipment and products necessary for the construction, installation and efficient operation of the ventilation and air conditioning systems.
+Ventdes helps its clients with the experts advice in the selection of essential equipment and products necessary for the construction, installation and efficient operation of the ventilation and air conditioning systems.
 
 The company has spent the first year on building its cusotmer portfolio. This was based on the classic brick and mortar business model and direct face to face sales approach. Duing that year Ventdes has managed to built trust with its customers and has many returning clients. Going into second year company's growth slowed down. Employees has raised they voice that they spend most time placeing orders and have no time for cusotmer visits. Company has hit the cul de sac. 
 
@@ -350,12 +350,6 @@ Customer supplied all images for the website. Kukladev asked for the images to b
 \
 &nbsp;
 
-### Admin
-![Administrator](docs/flows/ventdes-administrator-flow.png)
-
-## Data Schema
-![Ventdes Data Schema](docs/schemas/ventdes-data-schema.png "Ventdes Data Schema")
-
 ## Models
 
 ### Product
@@ -363,13 +357,14 @@ Customer supplied all images for the website. Kukladev asked for the images to b
 | Name | Key | Type | Other Details |
 | -- | -- | -- | --
 | category | FK (Category) | | null=True, blank=True, on_delete=models.SET_NULL
-| sku || CharField | max_length=254 | null=True, blank=True
-| name || CharField | max_length=254, null=True, unique=True, validators=[MinLengthValidator(3)]
-| description || TextField
-| price || DecimalField | max_digits=12, decimal_places=2
-| rating || DecimalField | min_value=0, max_value=5, decimal_places=1
+| sku |  | CharField | max_length=254 | null=True, blank=True
+| name |  | CharField | max_length=254, null=True, unique=True, validators=[MinLengthValidator(3)]
+| description |  | TextField
+| price |  | DecimalField | max_digits=12, decimal_places=2
+| rating |  | DecimalField | min_value=0, max_value=5, decimal_places=1
 | image_url |  | ImageField | max_length_1024, null=True, blank=True
 | image |  | ImageField | null=True, blank=True
+
 \
 &nbsp;
 
@@ -377,7 +372,8 @@ Customer supplied all images for the website. Kukladev asked for the images to b
 
 | Name | Key | Type | Other Details |
 | -- | -- | -- | -- |
-| name || CharField | max_length=254, null=True, blank=True, validators=[MinLengthValidator(3)]
+| name |  | CharField | max_length=254, validators=[MinLengthValidator(3)]
+| friendly_name |  | CharField | max_length=254, null=True, blank=True, validators=[MinLengthValidator(3)]
 
 
 \
@@ -387,7 +383,23 @@ Customer supplied all images for the website. Kukladev asked for the images to b
 
 | Name | Key | Type | Other Details |
 | -- | -- | -- | -- |
-| level | | CharField | max_length=6, null=True, unique=True, validators=[MinLengthValidator(3)] |
+| order_number |  | CharField | max_length=32, null=False, editable=False
+| user_profile | ForeignKey | | on_delete=models.SET_NULL, null=True, blank=True, related_name='orders'
+| full_name |  | CharField | max_length=50, null=False, blank=False
+| email |  | EmailField | max_length=254, null=False, blank=False
+| phone_number |  | CharField | max_length=20, null=False, blank=False
+| address1 |  | CharField | max_length=80, null=False, blank=False
+| address2 |  | CharField | max_length=80, null=True, blank=True
+| city |  | CharField | max_length=50, null=False, blank=False
+| county |  | CharField | max_length=80, null=True, blank=True
+| postcode |  | CharField | max_length=20, null=False, blank=False
+| country |  | CountryField | null=False, blank=False
+| date |  | DateTimeField | auto_now_add=True
+| delivery_cost |  | DecimalField | max_digits=12, decimal_places=2, null=False, default=0
+| order_total |  | DecimalField | max_digits=18, decimal_places=2, null=False, default=0
+| grand_total |  | DecimalField | max_digits=18, decimal_places=2, null=False, default=0
+| original_cart |  | TextField | null=False, blank=False, default=''
+| stripe_pid |  | CharField | max_length=254, null=False, blank=False, default=''
 
 \
 &nbsp;
@@ -396,13 +408,26 @@ Customer supplied all images for the website. Kukladev asked for the images to b
 
 | Name | Key | Type | Other Details
 | -- | -- | -- | --
-| name |  | CharField | max_length=8, null=True, unique=True, validators=[MinLengthValidator(4)]
+| order | ForeignKey |  | null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems'
+| product | ForeignKey |  | null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems'
+| product_size |  | CharField | null=True, blank=True
+| quantity |  | IntegerField | null=False, blank=False, default=0 
+| lineitem_total |  | DecimalField | max_digits=12, decimal_places=2, null=False, blank=False, editable=False
 
 ### UserProfile
 
 | Name | Key | Type | Other Details
 | -- | -- | -- | --
-| name |  | CharField | max_length=8, null=True, unique=True, validators=[MinLengthValidator(4)]
+| user |  | OneToOneField | on_delete=models.CASCADE
+| default_phone_number |  | CharField | max_length=20, null=False, blank=False
+| default_address1 |  | CharField | max_length=80, null=True, blank=True
+| default_address2 |  | CharField | max_length=80, null=True, blank=True
+| default_city |  | CharField | max_length=20, null=True, blank=True
+| default_county |  | CharField | max_length=80, null=True, blank=True
+| default_postcode |  | CharField | max_length=20, null=False, blank=False
+| default_country |  | CountryField | null=False, blank=False
+
+
 
 
 \
@@ -418,7 +443,7 @@ Customer supplied all images for the website. Kukladev asked for the images to b
 
 ### Navbar
 
-The navigation bar is fully responsive to adapt to various screen sizes. It is **sticky**, it follows user when scrolling the page. Navbar changes depending on the user login status. Upon loading the landing page, unauthenticated have an option to sign in. Authenticated user have additional options depending whether it is an administrator or standard user:
+The navigation bar is fully responsive to adapt to various screen sizes. It is **sticky**, it follows user when scrolling the page. Navbar changes depending on the user login status. Upon loading the landing page, unauthenticated user have an option to sign in. Authenticated user have additional options depending whether it is an administrator or standard user:
 
 - Unauthenticated user view:
 
@@ -433,14 +458,9 @@ The navigation bar is fully responsive to adapt to various screen sizes. It is *
 
 [Desktop](docs/features/desktop-standard-user.png "Desktop")
 
-Additionally authenticated user whether admin or not can see number of resolved and unresolved records
+Additionally authenticated user whether admin or not can see their profile and previous orders history.
 
-![Mobile](docs/features/mobile-un-resolved-records.png "Mobile")
-
-![Desktop](docs/features/desktop-un-resolved-records.png "Desktop")
-
-
-- Authenticated, administrator view: 
+- Authenticated, administrator or store owner view: 
 
 [Truncated](docs/features/mobile-admin-user.png "Mobile")
 
@@ -448,26 +468,11 @@ Additionally authenticated user whether admin or not can see number of resolved 
 
 ### Administrator
 
-Administrator can see list of all recorded hazards for every user. It can also add, update and delete categories, risks and statuses.
+Administrator can see list of all products and categories. It can edit, update and delete products and categories. Administrator can also activate and deactivate users accounts.
 
 [Administrator Dashboard](docs/features/administrator-dashboard.png "Administrator Dashboard")
 
 [Standard User Dashboard](docs/features/standard-user-dashboard.png "Standard User Dashboard")
-
-### Title Truncate
-
-If the title of the hazard record in is too long, the overflow text might be truncatd. In such cases the three dots will appear insted of truncated charcters. In order to see the full title user must click on the specific record to view more details.
-
-- Title overflow hidden: 
-![Title Overflow Hidden](docs/features/title-truncated-001.png "Title Overflow Hidden")
-- Title fully displayed:
-![Title Fully Displayed](docs/features/title-truncated-002.png "Title Fully Displayed")
-
-### Footer
-
-The footer is responsive to adapt to various screen sizes. Each item of the footer is highlighted when user hovers over it. Logo in the footer acts as a home page (back to top). There is also information about the copyright and the designer.
-
-![Footer](docs/features/footer.png "Footer")
 
 ### Homepage
 The home page is divided into sections:
@@ -475,31 +480,53 @@ The home page is divided into sections:
 
 ![Hero Image](docs/features/hero.png "Hero")
 
+- Deal Breakers, New Arrivals and Clearance categories
+
+![Deal Breakers, New Arrivals, Clearance](docs/features/debrenacle.png "Deal Breakers, New Arrivals, Clearance")
+
+- Trending products
+
+![Trending](docs/features/trending.png "Trending")
+
+- Featured products
+
+![Featured Products](docs/features/fetured_products.png "Featured Products")
+
+### About
 - About the company, a brief description of the company
 
 ![About](docs/features/about.png "About")
+
+### Contact
 
 - Contact form for any enquiries
 
 ![Contact](docs/features/contact.png "Contact")
 
-### Hazards List
+### Products
 
-The hazard list displays all hazards for the currently logged user. Each hazard is displayed in the separate card. User can click into it to view more details. Additionaly, each card can be edited, updated and deleted by the user. Only administrator can view, update and delete hazard records of other users.
+The product list display all products available to purchase. Each product is displayed in the separate card. User can add single product to the cart by clicking on the basket icon on the product card. To view more details about the product click on the magnifying glass on the product card.
 
-[Hazards List](docs/features/hazards-view.png "Hazards List")
+[Products List](docs/features/hazards-view.png "Products List")
 
-### Hazard Details
+### Product Details
 
-The hazard details page displays all information about the item recorded by the user. Here user have also option to change the risk level and status of it. Additionally, if the record is missing a descrition, the red text appears indicating that to the user.
+The products details page displays additional information about the item. Here user have also an option to change quantity and add it to the cart.
 
-[Hazard Details](docs/features/hazard-details.png "Hazard Details")
+[Products Details](docs/features/products-details.png "Products Details")
 
-### Search
-User can narrow down the list of hazards using search option. This simple yet very effective funciton will display only items that contain searched keyword in the title.
+### Search and Filters
+User can narrow down the list of products using the search option or filtering the list by specific category, pric, rating etc. These simple yet very effective funcitons will display only items that contain searched keywords or specific filter criteria.
 
 * [Search Result](docs/features/search-result-view.png "Search Result")
+* [Filter Result](docs/features/filter-result-view.png "Filter Result")
 * [Full List](docs/features/full-list-view.png "Full List")
+
+### Footer
+
+The footer is responsive to adapt to various screen sizes. Each item of the footer is highlighted when user hovers over it. Logo in the footer acts as a home page (back to top). There is also information about the copyright and the designer.
+
+![Footer](docs/features/footer.png "Footer")
 
 \
 &nbsp;
@@ -510,19 +537,18 @@ User can narrow down the list of hazards using search option. This simple yet ve
 ## Future developments
 
 There are a few ideas that I would like to implement in the future:
-* Filter funciton to narrow down list based on the hazard type, riks level, status etc.
 * Additional user profiles and access levels -> administrator, manager, employee
-* Use Google maps location service when adding a new hazard
-* Additional dropdown lists of 'Risk Types', 'Risk Probability', 'Risk Consequences'
-* Risk level to be computed automatically depending on the 'Risk Type', 'Risk Probability' and 'Risk Consequences'
-* Additional field to add 'Corrective Action' for each hazard recorded
-* User's can be assigned to specific team within the company
-* Hazard can be assigned to specific team to resolve
+* Additional order status types that trigger response to customer i.e. 'in preparation', 'ready to dispatch', 'shipped'
+* Order tracking capabilities, where cusotmer can track courier status
 * Biometric login
-* Automated email to notify manager, user or a team that the new hazard has been recoreded for them to resolve
+* Stock levels view with visual cues about low, medium and high quantities in stock
+* Stock report informing about stock turnover rates per product and flag slow or non-selling products for sell-off or clearance deals
 * User profile picture
-* Ability to inactivate users without deleting any data they recorded
-* Accessing camera to snap an image of hazard right from the application
+* Ability to dectivate products without deleting their sales history
+* Ability to mass upload products using external data file i.e. excel file
+* Allow user to share product via social media
+* Allow user to add product to favourites
+* Allow user to add product to wishlist that will trigger an automated email about any deals for it
 
 \
 &nbsp;
@@ -536,44 +562,45 @@ There are a few ideas that I would like to implement in the future:
 
 | Languages | Link |
 |--|--|
-|HTML|[HTML](https://en.wikipedia.org/wiki/HTML5 "HTML")| 
-|CSS|[CSS](https://en.wikipedia.org/wiki/CSS "CSS")|
-|JavaScript|[JavaScript](https://en.wikipedia.org/wiki/JavaScript "JS")|
-|jQuery|[jQuery](https://jquery.com/ "jQuery")|
-|Python|[Python](https://en.wikipedia.org/wiki/Python_(programming_language) "Python")|
-|Markdown|[Markdown](https://en.wikipedia.org/wiki/Markdown)
+| HTML | [HTML](https://en.wikipedia.org/wiki/HTML5 "HTML")
+| CSS | [CSS](https://en.wikipedia.org/wiki/CSS "CSS")
+| JavaScript | [JavaScript](https://en.wikipedia.org/wiki/JavaScript "JS")
+| jQuery | [jQuery](https://jquery.com/ "jQuery")
+| Python | [Python](https://en.wikipedia.org/wiki/Python_(programming_language) "Python")
+| Markdown | [Markdown](https://en.wikipedia.org/wiki/Markdown)
 
 ## Libraries, Frameworks and Tools
 | Libraries / Frameworks / Tools| Description | Link |
 |--|--|--|
-|Django|Database Driven Framework| [django](https://en.wikipedia.org/wiki/Django_(web_framework) "django")|
-|gunicorn|HTTP Interface Server|[gunicorn](https://en.wikipedia.org/wiki/Gunicorn "gunicorn")|
-|psycopg2| Database adaptor | [psycopg2](https://wiki.postgresql.org/wiki/Psycopg "psycogg2")|
-|cloudinary |Image management|[cloudinary](https://cloudinary.com/ "cloudinary")|
-|django-allauth|User authentication|[django-allauth](https://django-allauth.readthedocs.io/en/latest/index.html "django-allauth")|
-| django crispy forms | Styling forms | [crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/ "crispy-forms")|
-|Site mockup| Mockup of site on different screen sizes|[Multi Device Website Mockup Generator](https://techsini.com/multi-mockup/index.php "Mockup Generator")|
-|Sitemap Generator| Generating the site map|[xml-sitemaps](https://www.xml-sitemaps.com/ "XML-Sitemaps.com")|
-|HTML Validation| Validating HTML|[w3.org](https://validator.w3.org/ "W3C")|
-|CSS Validation| Validating CSS|[w3.org](https://jigsaw.w3.org/css-validator/ "W3C")|
-|JS Validation|Validating JS & jQuery|[jshint](https://jshint.com/ "JSHint")|
-|PEP8|Validating python|[PEP8](http://pep8online.com/ "PEP8")|
-| Lucid | Site structure design | [Lucid](https://lucid.co/ "Lucid")|
-| Pexels | Images |[Pexels](https://pexels.com/ "Pexels")|
-| TinyIMG | Image conversion | [TinyIMG](https://tiny-img.com/webp/ "TinyIMG")|
-| TinyPng | Image optimisation | [TinyPNG](https://tinypng.com/ "TinyPNG")|
-| jpg2png.com | Image converter | [jpg2png](https://jpg2png.com/ "jpg2png")|
-| GitPod | Development environment |[Gitpod](https://www.gitpod.io/ "Gitpod")|
-| WireframePro | Structure and App Flow |[diagrams.net](https://www.diagrams.net/ "diagrams.net")|
-| WireframePro | Wireframes |[WireframePro](https://mockflow.com/design/wireframepro/ "WireframePro")|
-| drawSQL | Database Schema |[drawSQL](https://drawsql.app/ "drawSQL")|
-| Bootstrap | Responsive design |[Bootstrap](https://getbootstrap.com "Bootstrap")|
-| Font Awesome | Icons |[Font Awesome library](https://fontawesome.com/ "Font Awesome")|
-| Colours | Colour pallet| [coolors](https://coolors.co/ "coolors")|
-| Google Fonts| Fonts |[Google Fonts](https://fonts.google.com/ "Fonts")|
-| WebAIM| Colour contrast checks |[WebAIM](https://webaim.org/resources/contrastchecker/ "WebAIM")|
-|generateprivacypolicy.com|Privacy Policy Generator| [Generate Privacy Policy](https://www.generateprivacypolicy.com/)|
-|favicon.io| Create the favicon| [favicon.io](https://favicon.io/ "favicon.io")|
+| Django | Database Driven Framework | [django](https://en.wikipedia.org/wiki/Django_(web_framework) "django")
+| gunicorn|HTTP Interface Server | [gunicorn](https://en.wikipedia.org/wiki/Gunicorn "gunicorn")
+| psycopg2| Database adaptor | [psycopg2](https://wiki.postgresql.org/wiki/Psycopg "psycogg2")
+| Amazon Web Services (AWS) | File storage and management |[Amazon Web Services (AWS)](https://cloudinary.com/ "Amazon Web Services (AWS)")
+| cloudinary | Image management | [cloudinary](https://cloudinary.com/ "cloudinary")
+| django-allauth | User authentication | [django-allauth](https://django-allauth.readthedocs.io/en/latest/index.html "django-allauth")
+| django crispy forms | Styling forms | [crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/ "crispy-forms")
+| Site mockup | Mockup of site on different screen sizes | [Multi Device Website Mockup Generator](https://techsini.com/multi-mockup/index.php "Mockup Generator")
+| Sitemap Generator | Generating the site map | [xml-sitemaps](https://www.xml-sitemaps.com/ "XML-Sitemaps.com")
+| HTML Validation | Validating HTML | [w3.org](https://validator.w3.org/ "W3C")
+| CSS Validation | Validating CSS | [w3.org](https://jigsaw.w3.org/css-validator/ "W3C")
+| JS Validation|Validating JS & jQuery | [jshint](https://jshint.com/ "JSHint")
+| PEP8 | Validating python | [PEP8](http://pep8online.com/ "PEP8")
+| Lucid | Site structure design | [Lucid](https://lucid.co/ "Lucid")
+| Pexels | Images |[Pexels](https://pexels.com/ "Pexels")
+| TinyIMG | Image conversion | [TinyIMG](https://tiny-img.com/webp/ "TinyIMG")
+| TinyPng | Image optimisation | [TinyPNG](https://tinypng.com/ "TinyPNG")
+| jpg2png.com | Image converter | [jpg2png](https://jpg2png.com/ "jpg2png")
+| GitPod | Development environment | [Gitpod](https://www.gitpod.io/ "Gitpod")
+| WireframePro | Structure and App Flow | [diagrams.net](https://www.diagrams.net/ "diagrams.net")
+| WireframePro | Wireframes | [WireframePro](https://mockflow.com/design/wireframepro/ "WireframePro")
+| drawSQL | Database Schema | [drawSQL](https://drawsql.app/ "drawSQL")
+| Bootstrap | Responsive design | [Bootstrap](https://getbootstrap.com "Bootstrap")
+| Font Awesome | Icons | [Font Awesome library](https://fontawesome.com/ "Font Awesome")
+| Colours | Colour pallet | [coolors](https://coolors.co/ "coolors")
+| Google Fonts| Fonts | [Google Fonts](https://fonts.google.com/ "Fonts")
+| WebAIM | Colour contrast checks | [WebAIM](https://webaim.org/resources/contrastchecker/ "WebAIM")
+|generateprivacypolicy.com | Privacy Policy Generator| [Generate Privacy Policy](https://www.generateprivacypolicy.com/)
+| favicon.io | Create the favicon | [favicon.io](https://favicon.io/ "favicon.io")
 
 
 # Testing
@@ -651,9 +678,9 @@ This is the part I have been struggling with and will have to spend a bit more t
 | [Issue 122#](https://github.com/lukaszkukla/ventdes/issues/122 "Issue #122") | Profile dropdown | Includ dropdown in navbar for user profile and logout |
 | [Issue 112#](https://github.com/lukaszkukla/ventdes/issues/112 "Issue #112") | Category list view | Long description expand the card in list view |
 | [Issue 115#](https://github.com/lukaszkukla/ventdes/issues/115 "Issue #115") | Search and pagination | Django only allows one of them at the time, remove pagination |
-| [Issue 119#](https://github.com/lukaszkukla/ventdes/issues/119 "Issue #119") | Hazard detailed view labels | Must be bolder to stand out from the rest |
+| [Issue 119#](https://github.com/lukaszkukla/ventdes/issues/119 "Issue #119") | Product detailed view labels | Must be bolder to stand out from the rest |
 | [Issue 123#](https://github.com/lukaszkukla/ventdes/issues/123 "Issue #123") | Contact form links | Must be active links |
-| [Issue 118#](https://github.com/lukaszkukla/ventdes/issues/118 "Issue #118") | Hazard detailed view | Status and risk must be aligned on the same level |
+| [Issue 118#](https://github.com/lukaszkukla/ventdes/issues/118 "Issue #118") | Product detailed view | Status and risk must be aligned on the same level |
 
 
 \
@@ -719,16 +746,16 @@ All HTML files were tested using browser's "View page source" function due to dj
 ### Python
 | File Name | File Path | Result | PEP8 | Comments |
 |--|--|--|--|--|
-| admin.py | hazard/admin.py | PASS | [link](docs/validation/python/admin.png "link") ||
-| apps.py | hazard/apps.py | PASS | [link](docs/validation/python/apps.png "link") ||
-| forms.py | hazard/forms.py | PASS | [link](docs/validation/python/forms.png "link") ||
-| models.py | hazard/models.py | PASS | [link](docs/validation/python/models.png "link") ||
-| urls.py | hazard/urls.py | PASS | [link](docs/validation/python/haz-urls.png "link") ||
-| views.py | hazard/views.py | PASS | [link](docs/validation/python/views.png "link") ||
-| asgi.py | hazard/asgi.py | PASS | [link](docs/validation/python/asgi.png "link") ||
+| admin.py | XXXXXXXXXXX/admin.py | PASS | [link](docs/validation/python/admin.png "link") ||
+| apps.py | XXXXXXXXXXX/apps.py | PASS | [link](docs/validation/python/apps.png "link") ||
+| forms.py | XXXXXXXXXXX/forms.py | PASS | [link](docs/validation/python/forms.png "link") ||
+| models.py | XXXXXXXXXXX/models.py | PASS | [link](docs/validation/python/models.png "link") ||
+| urls.py | XXXXXXXXXXX/urls.py | PASS | [link](docs/validation/python/haz-urls.png "link") ||
+| views.py | XXXXXXXXXXX/views.py | PASS | [link](docs/validation/python/views.png "link") ||
+| asgi.py | XXXXXXXXXXX/asgi.py | PASS | [link](docs/validation/python/asgi.png "link") ||
 | settings.py | ventdes/settings.py | PASS | [link](docs/validation/python/settings.png "link") ||
-| urls.py | ventdes/urls.py | PASS | [link](docs/validation/python/urls.png "link") ||
-| wsgi.py | ventdes/wsgi.py | PASS | [link](docs/validation/python/wsgi.png "link") ||
+| urls.py | XXXXXXXXXXX/urls.py | PASS | [link](docs/validation/python/urls.png "link") ||
+| wsgi.py | XXXXXXXXXXX/wsgi.py | PASS | [link](docs/validation/python/wsgi.png "link") ||
 
 \
 &nbsp; 
@@ -750,11 +777,10 @@ All HTML files were tested using browser's "View page source" function due to dj
 &nbsp;
 
 ## Unfixed Bugs
-There is one error that I was not able to complete on time. It relates to pages being rendered through */hazard/templates/pages/passwords.html*
-I was not able to render all password change and reset forms and pages through this page. Therefore I hadt to uses *{% extends/base.html %}* in all pages relating to password. I did not want to spend too much time on this one leaving other bugs unattended. I parked it till the end but runout of time.
+Description of the bug
 
 
-* [Error #1 - with reference](docs/bugs/password-error-001.png "password error") I could not make default django templates to be rendered through password.html. When reference to base.html is removed from components styling is not applied [Error #1 - without reference](docs/bugs/password-error-002.png "password error") 
+* [Error #1 - with reference](docs/bugs/password-error-001.png "error name") error brief description [Error #1 - without reference](docs/bugs/error-001.png "password error") 
 
 \
 &nbsp;
@@ -854,9 +880,17 @@ python3 manage.py runserver
 
 | Key | Value |
 | --- | --- |
-| CLOUDINARY_URL | URL from Cloudinary
-| SECRET_KEY | Secret Key generated from [miniwebtool.com](https://miniwebtool.com/django-secret-key-generator/ "miniwebtool")
-
+| AWS_ACCESS_KEY_ID | ID from AWS
+| AWS_SECRET_ACCESS_KEY_ID | Secret access key from AWS
+| DATABASE_URL | url for postgres database
+| SECRET_KEY | Secret Key generated from [here](https://miniwebtool.com/django-secret-key-generator/ "Secret Key Generator")
+| EMAIL_BACKEND | django core mail backend smtp
+| EMAIL_HOST | smtp.gmail.com
+| EMAIL_HOST_PASSWORD | Password from Gmail authentication setup
+| EMAIL_HOST_USER | Gmail account that will be used
+| STRIPE_PUBLIC_KEY | From the stripe section
+| STRIPE_SECRET_KEY | From the stripe section
+| STRIPE_WH_SECRET | From the stripe section
 
 * In the buildpacks section of the settings tab, click on **Add Buildpack**, select **python** and then save changes
 * Open the **Deploy** tab
@@ -881,6 +915,31 @@ ALLOWED_HOSTS = ['YOUR_PROJECT_NAME.herokuapp.com', 'localhost']
 * In the Automatic deploys section, click **Enable Automatic Deploys**. This updates every time GitHub code is pushed
 * To complete the process click on the **Deploy Brach** button in the Manual deploy section, this will take a few seconds to complete while Heroku builds the app
 * A message will appear informing you that the app was successfully deployed and a **View** button will bring you to the live site
+
+
+### Stripe
+* Visit Stripe by following this [link](https://dashboard.stripe.com/register "Stirpe")
+* And register for an account, for this project as it is only set up for test payments the *activate payments* section can be skipped.
+* From the dashboard, click on the *Developers* and then on the lefthand side, *Webhooks*.
+* Click on the *Add endpoint button* and paste in the Heroku URL with `/checkout/wh/` included on the end, for example, this project would be `https://ventdes.herokuapp.com/checkout/wh/`
+* Add an optional description if required
+* Click the *Select events* button and mark the checkbox for *Select all events*, then click *
+Add events*.
+* Scroll to the very bottom of the page and then click *Add endpoint*
+* From the webhook page under the URL, reveal the Signing secret, this will need to be added to Heroku config vars as STRIPE_WH_SECRET.
+* Still in the developer's section of Stripe, click on the *API keys* link on the left, the *Publishable key* (STRIPE_PUBLIC_KEY) and *Secret key* (STRIPE_SECRET_KEY) will also be needed to be added to Heroku config vars.
+
+### Email setup
+This project is using Gmail as its email provider. Other providers can be used but the setup will differ slightly.
+
+* Create a Gmail account, or log in if you already have an account
+* At the top right waffle menu select *Account*, then on the left of the screen select *Security*
+* In the *Signing into Google* section turn on 2-step verification and then click *Get started*
+* Enter your password and select a verification method
+* Go back to the security page and under the 2-step verification there is a new option called *App passwords*, click it.
+* In the select app dropdown, select *Mail*
+* In the select device dropdown, select *Other* and type in *Django*
+* The app password will be shown, copy this and add it to the Heroku config vars as EMAIL_HOST_PASS.
 
 \
 &nbsp;
