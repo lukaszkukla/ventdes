@@ -358,20 +358,18 @@ Customer supplied all images for the website. Kukladev asked for the images to b
 
 ## Models
 
-### Hazard
+### Product
 
 | Name | Key | Type | Other Details |
 | -- | -- | -- | --
-| category | FK (Category) | | null=True, blank=True, on_delete=models.SET_NULL |
-| title || CharField | max_length=80, null=True, unique=True, validators=[MinLengthValidator(4)] |
-| image |  | CloudinaryField | 'image', default='placeholder' |
-| description || TextField | null=True, blank=True |
-| updated_on || DateTimeField | auto_now=True |
-| created_on || DateTimeField | auto_now_add=True |
-| user | FK (User) |  | on_delete=models.CASCADE, null=True, blank=True |
-| level | FK (Risk) |  | null=True, blank=True, on_delete=models.SET_NULL |
-| status || FK (Status) | null=True, blank=True, on_delete=models.SET_NULL |
-
+| category | FK (Category) | | null=True, blank=True, on_delete=models.SET_NULL
+| sku || CharField | max_length=254 | null=True, blank=True
+| name || CharField | max_length=254, null=True, unique=True, validators=[MinLengthValidator(3)]
+| description || TextField
+| price || DecimalField | max_digits=12, decimal_places=2
+| rating || DecimalField | min_value=0, max_value=5, decimal_places=1
+| image_url |  | ImageField | max_length_1024, null=True, blank=True
+| image |  | ImageField | null=True, blank=True
 \
 &nbsp;
 
@@ -379,14 +377,13 @@ Customer supplied all images for the website. Kukladev asked for the images to b
 
 | Name | Key | Type | Other Details |
 | -- | -- | -- | -- |
-| name || CharField | max_length=80, null=True, unique=True, validators=[MinLengthValidator(3)] |
-| description || TextField | null=True, blank=True |
+| name || CharField | max_length=254, null=True, blank=True, validators=[MinLengthValidator(3)]
 
 
 \
 &nbsp;
 
-### Risk
+### Order
 
 | Name | Key | Type | Other Details |
 | -- | -- | -- | -- |
@@ -395,7 +392,13 @@ Customer supplied all images for the website. Kukladev asked for the images to b
 \
 &nbsp;
 
-### Status
+### OrderLineItem
+
+| Name | Key | Type | Other Details
+| -- | -- | -- | --
+| name |  | CharField | max_length=8, null=True, unique=True, validators=[MinLengthValidator(4)]
+
+### UserProfile
 
 | Name | Key | Type | Other Details
 | -- | -- | -- | --
