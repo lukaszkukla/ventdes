@@ -612,31 +612,31 @@ There are a few ideas that I would like to implement in the future:
 
 | ID |  User wants to... | Issue Number | Comments
 |--|--|--| -- |
-| 01 | Register new account | [Issue #8](https://github.com/lukaszkukla/ventdes/issues/8 "Issue #8") | User can register a new account
-| 02 | Login | [Issue #9](https://github.com/lukaszkukla/ventdes/issues/9 "Issue #9") | User can login to registered account
-| 03 | Logout | [Issue #10](https://github.com/lukaszkukla/ventdes/issues/10 "Issue #10") | User can logout from its account
-| 04 | Reset forgotten password | [Issue #11](https://github.com/lukaszkukla/ventdes/issues/11 "Issue #11") | User can reset forgotten password
-| 05 | Record hazard | [Issue #12](https://github.com/lukaszkukla/ventdes/issues/12 "Issue #12") | User can add new hazard
-| 06 | hazard categories | [Issue #13](https://github.com/lukaszkukla/ventdes/issues/13 "Issue #13") | User can select from list of hazard categories
-| 07 | hazard title | [Issue #14](https://github.com/lukaszkukla/ventdes/issues/14 "Issue #14") | User can add hazard title
-| 08 | hazard details | [Issue #15](https://github.com/lukaszkukla/ventdes/issues/15 "Issue #15") | User can add detailed descritpion of a hazard
-| 09 | hazard date | [Issue #16](https://github.com/lukaszkukla/ventdes/issues/16 "Issue #16") | Hazard date id recorded automatically when user add a new record
-| 10 | hazard risk level | [Issue #17](https://github.com/lukaszkukla/ventdes/issues/17 "Issue #17") | User can select risk level of an hazard
-| 11 | hazard image | [Issue #18](https://github.com/lukaszkukla/ventdes/issues/18 "Issue #18") | User can add image of an hazard
-| 12 | hazard status | [Issue #19](https://github.com/lukaszkukla/ventdes/issues/19 "Issue #19") | User can change status of a hazard
-| 13 | Contact details | [Issue #20](https://github.com/lukaszkukla/ventdes/issues/20 "Issue #20") | Contact form, active link for telephone number, email and google maps
-| 14 | View all hazards | [Issue #22](https://github.com/lukaszkukla/ventdes/issues/22 "Issue #22") | Summary view of open and closed hazards for the user
-| 15 | View individaul hazard details | [Issue #31](https://github.com/lukaszkukla/ventdes/issues/31 "Issue #31") | Detailed view of recorded hazard
-| 16 | View all categories | [Issue #26](https://github.com/lukaszkukla/ventdes/issues/26 "Issue #26") | Administrator can view list of all categories
-| 17 | Add category | [Issue #23](https://github.com/lukaszkukla/ventdes/issues/23 "Issue #23") | New categories can be added by administrator
-| 18 | Edit and update a category | [Issue #25](https://github.com/lukaszkukla/ventdes/issues/25 "Issue #25") | Category details can be edited and updated in the applicatoin by the administrator
-| 19 | Delete category | [Issue #24](https://github.com/lukaszkukla/ventdes/issues/24 "Issue #24") | Category can be deleted from the applicatoin by the administrator
-| 20 | View all risk types | [Issue #100](https://github.com/lukaszkukla/ventdes/issues/100 "Issue #100") | Administrator can view list of all risk types
-| 21 | Add, edit, update and delete risk type | [Issue #98](https://github.com/lukaszkukla/ventdes/issues/98 "Issue #98") | Category details can be edited and updated in the applicatoin by the administrator
-| 22 | View all status types | [Issue #101](https://github.com/lukaszkukla/ventdes/issues/101 "Issue #101") | Administrator can view list of all categories
-| 23 | Add, edit, update and delete status type | [Issue #99](https://github.com/lukaszkukla/ventdes/issues/99 "Issue #99") | Category details can be edited and updated in the applicatoin by the administrator
-| 20 | View account details | [Issue #32](https://github.com/lukaszkukla/ventdes/issues/32 "Issue #32") | User can view its own account details
-| 21 | Edit and update account details | [Issue #33](https://github.com/lukaszkukla/ventdes/issues/33 "Issue #33") | User can edit and update its own account details
+| 01 | Register new account | [Issue #1](https://github.com/lukaszkukla/ventdes/issues/1 "Issue #1") | User can register a new account
+| 02 | Login | [Issue #2](https://github.com/lukaszkukla/ventdes/issues/2 "Issue #2") | User can login to registered account
+| 03 | Logout | [Issue #3](https://github.com/lukaszkukla/ventdes/issues/3 "Issue #3") | User can logout from its account
+| 04 | Reset forgotten password | [Issue #4](https://github.com/lukaszkukla/ventdes/issues/4 "Issue #4") | User can reset forgotten password
+| 05 | XXXXXX | [Issue #5](https://github.com/lukaszkukla/ventdes/issues/5 "Issue #5") | XXXXXX
+| 06 | XXXXXX | [Issue #6](https://github.com/lukaszkukla/ventdes/issues/6 "Issue #6") | XXXXXX
+| 07 | XXXXXX | [Issue #7](https://github.com/lukaszkukla/ventdes/issues/7 "Issue #7") | XXXXXX
+| 08 | XXXXXX | [Issue #8](https://github.com/lukaszkukla/ventdes/issues/8 "Issue #8") | XXXXXX
+| 09 | XXXXXX | [Issue #9](https://github.com/lukaszkukla/ventdes/issues/9 "Issue #9") | XXXXXX
+| 10 | Product image | [Issue #10](https://github.com/lukaszkukla/ventdes/issues/10 "Issue #10") | Store owner / administrator can add image of a product
+| 11 | XXXXXX | [Issue #11](https://github.com/lukaszkukla/ventdes/issues/11 "Issue #11") | XXXXXX
+| 12 | XXXXXX | [Issue #12](https://github.com/lukaszkukla/ventdes/issues/12 "Issue #12") | XXXXXX
+| 13 | Contact details | [Issue #13](https://github.com/lukaszkukla/ventdes/issues/13 "Issue #13") | Contact form, active link for telephone number, email and google maps
+| 14 | View all products | [Issue #14](https://github.com/lukaszkukla/ventdes/issues/14 "Issue #14") | View of all products in the shop
+| 15 | View individaul product details | [Issue #15](https://github.com/lukaszkukla/ventdes/issues/15 "Issue #15") | Detailed view of the selected product
+| 16 | View all categories | [Issue #16](https://github.com/lukaszkukla/ventdes/issues/16 "Issue #16") | Administrator can view list of all categories
+| 17 | Add category | [Issue #17](https://github.com/lukaszkukla/ventdes/issues/17 "Issue #17") | New categories can be added by administrator
+| 18 | Edit and update a category | [Issue #18](https://github.com/lukaszkukla/ventdes/issues/18 "Issue #18") | Category details can be edited and updated in the application by the administrator
+| 19 | Delete category | [Issue #19](https://github.com/lukaszkukla/ventdes/issues/19 "Issue #19") | Category can be deleted from the application by the administrator
+| 20 | XXXXXX | [Issue #20](https://github.com/lukaszkukla/ventdes/issues/20 "Issue #20") | XXXXXX
+| 21 | XXXXXX | [Issue #21](https://github.com/lukaszkukla/ventdes/issues/21 "Issue #21") | XXXXXX
+| 22 | XXXXXX | [Issue #22](https://github.com/lukaszkukla/ventdes/issues/22 "Issue #22") | XXXXXX
+| 23 | XXXXXX | [Issue #23](https://github.com/lukaszkukla/ventdes/issues/23 "Issue #23") | XXXXXX
+| 24 | View account details | [Issue #24](https://github.com/lukaszkukla/ventdes/issues/24 "Issue #24") | User can view its own account details and history of previous orders
+| 25 | Edit and update account details | [Issue #25](https://github.com/lukaszkukla/ventdes/issues/25 "Issue #25") | User can edit and update its own account details
 
 \
 &nbsp;
