@@ -285,6 +285,14 @@ Kukladev recommends to create a Facebook page [Ventdes](https://www.facebook.com
 * Cart
 ![Cart](docs/wireframes/cart.png "Cart")
 
+* About
+![About](docs/wireframes/about.png "About")
+
+* Contact
+![Contact](docs/wireframes/contact.png "Contact")
+
+
+
 \
 &nbsp;
 [Back to Top](#table-of-contents)
