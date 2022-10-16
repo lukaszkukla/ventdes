@@ -435,9 +435,6 @@ Customer supplied all images for the website. Kukladev asked for the images to b
 | default_postcode |  | CharField | max_length=20, null=False, blank=False
 | default_country |  | CountryField | null=False, blank=False
 
-
-
-
 \
 &nbsp;
 [Back to Top](#table-of-contents)
