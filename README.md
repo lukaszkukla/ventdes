@@ -291,8 +291,6 @@ Kukladev recommends to create a Facebook page [Ventdes](https://www.facebook.com
 * Contact
 ![Contact](docs/wireframes/contact.png "Contact")
 
-
-
 \
 &nbsp;
 [Back to Top](#table-of-contents)
@@ -530,6 +528,10 @@ User can narrow down the list of products using the search option or filtering t
 ### Footer
 
 The footer is responsive to adapt to various screen sizes. Each item of the footer is highlighted when user hovers over it. Logo in the footer acts as a home page (back to top). There is also information about the copyright and the designer.
+
+### Authentication
+
+Newly registered user will receive account verification email. There is a 24h time limit for the user to confirm the email before the link will expire.
 
 ![Footer](docs/features/footer.png "Footer")
 
