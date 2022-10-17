@@ -34,61 +34,82 @@
 </head>
 
 <body>
-    <header class="container-fluid fixed-top">
-        <div class="row">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-lg-left">
-                <a href="{% url 'home' %}" class="main-logo-link logo-font">
-                    <img src="https://res.cloudinary.com/lkcloud/image/upload/v1665939721/Ventdes/logo_prlhgs.png"
-                        alt="Logo" width="32">
-                    <h2 class="logo-font">Ventdes</h2>
-                </a>
-            </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <form method="GET">
-                    <div class="input-group w-100">
-                        <input type="text" class="form-control border border-black rounded-0" name="q" placeholder="Search Ventes site">
-                        <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                                <span class="icon">
-                                    <i class="fas fa-"></i>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                    <li class="list-inline-item dropdown">
-                        <a href="#" class="text-black nav-link" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="my-0">My Account</p>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container container-fluid gx-0">
+            <div class="row w-100">
+                <div class="col-3 text-center">
+                    <a class="navbar-brand mx-0" href="{% url 'home' %}">
+                        <img src="https://res.cloudinary.com/lkcloud/image/upload/v1665939721/Ventdes/logo_prlhgs.png"
+                            alt="Logo" width="32">
+                        <span class="d-none d-sm-inline">Ventdes</span>
+                    </a>
+                </div>
+                <div class="col-8 gx-0">
+                    <form method="GET">
+                        <div class="input-group w-100">
+                            <input type="text" class="form-control border border-black rounded-0" name="q"
+                                placeholder="Search Ventdes site">
+                            <div class="input-group-append">
+                                <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                                    <span class="icon">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                </button>
                             </div>
-                        </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                            {% if request.user.is_authenticated %}
-                                {% if request.user.is_superuser %}
-                                    <a href="" class="dropdown-item">Products Management</a>
-                                    <a href="" class="dropdown-item">Categories Management</a>
-                                {% endif %}
-                                <a href="" class="dropdown-item">Profile</a>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                            {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                            {% endif %}
                         </div>
+                    </form>
+                </div>
+                <div class="col-1 gx-0">
+                    <button class="navbar-toggler border-0 px-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse col-2" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ALL PRODUCTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">SPECIAL OFFERS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CONTACT</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="user-options" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown link
+                        </a>
+                        <ul class="dropdown-menu border-0" aria-labelledby="user-options">
+                            {% if request.user.is_authenticated %}
+                            {% if request.user.is_superuser %}
+                            <a href="" class="dropdown-item">Products Management</a>
+                            <a href="" class="dropdown-item">Categories Management</a>
+                            {% endif %}
+                            <a href="" class="dropdown-item">Profile</a>
+                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                            {% else %}
+                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                            {% endif %}
+                        </ul>
                     </li>
                     <li class="list-inline-item">
-                        <a href="" class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link">
+                        <a href=""
+                            class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="my-0">
                                     {% if grand_total %}
-                                        €{{ grand_total|floatformat:2 }}
+                                    €{{ grand_total|floatformat:2 }}
                                     {% else %}
-                                        €0.00
+                                    €0.00
                                     {% endif %}
                                 </p>
                             </div>
@@ -97,7 +118,8 @@
                 </ul>
             </div>
         </div>
-    </header>
+    </nav>
+
     {% if messages %}
     <div class="message-container"></div>
     {% endif %}
@@ -110,6 +132,8 @@
 
     {% block postloadjs %}
     {% endblock postloadjs %}
+
+
 
 </body>
 
