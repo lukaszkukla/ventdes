@@ -97,6 +97,10 @@ a {
     padding: 1.6rem;
 }
 
+.dropdown-menu.border-0.dropdown-menu-right.show li,
+.dropdown-menu.border-0.dropdown-menu-right.show {
+    margin-right: 10rem;
+}
 
 
 
