@@ -4,10 +4,13 @@
 
 :root {
     --white: #FFFFFF;
-    --black: #222222;
+    --black1: #222222;
+    --black2: #000000;
     --grey1: #666666;
     --grey2: #737373;
     --amaranth: #B11841;
+    --amaranth085: #B11841D9;
+    --amaranth015: #B1184140;
     --light-grey1: #DDDDDD;
     --light-grey2: #F4F4F4;
 }
@@ -38,17 +41,55 @@ a {
     text-decoration: none;
 }
 
+/* ul {
+    margin: 0;
+} */
+
+/* Buttons and inputs */
+
 .input-search, .btn-search {
     width: 100%;
     padding: .375rem .75rem;
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.5;
-    border: none;
+}
+
+.btn-search {
+    background: var(--amaranth);
+    color: white;
+}
+
+.btn-search:hover,
+.btn-search:active,
+.btn-search:focus {
+    background: var(--amaranth085);
+    color: var(--white);
+}
+
+
+.btn-black {
+    background: var(--black2);
+    color: white;
+}
+
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: var(--black1);
+    color: var(--white);
 }
 
 .text-black {
     color: var(--black) !important;
+}
+
+.border-black {
+    border: 1px solid var(--black1);
+}
+
+.border-amaranth015 {
+    border: 1px solid var(--amaranth015);
 }
 
 /* Icon centering */
@@ -78,7 +119,7 @@ a {
 }
 
 .nav-link {
-    white-space: nowrap;
+    padding: 1rem 2rem;
 }
 
 .nav-link:hover,
@@ -91,16 +132,10 @@ a {
     font-size: 1.6rem;
 }
 
-.h68 {
-    height: 5.8rem;
-    align-items: center;
-    padding: 1.6rem;
+
+/* Media queries */
+@media (min-width: 992px) {
+    .header-container {
+        padding-top: 16.4rem;
+    }
 }
-
-.dropdown-menu.border-0.dropdown-menu-right.show li,
-.dropdown-menu.border-0.dropdown-menu-right.show {
-    margin-right: 10rem;
-}
-
-
-

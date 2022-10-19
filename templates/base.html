@@ -39,11 +39,85 @@
 
 <body>
     <header class="container-fluid fixed-top">
-        <div class="row">
-            <div class="col-12 col-lg-4 text-center text-lg-start">logo</div>
-            <div class="col-12 col-lg-4 text-center">search bar</div>
-            <div class="col-12 col-lg-4 text-center text-lg-end">cart and profile</div>
+        <div id="free-delivery" class="row text-center">
+            <div class="col bg-black text-white">
+                <h4 class="logo-font py-1">Free delivery over €50.00</h4>
+            </div>
         </div>
+        <div id="topnav" class="row bg-white d-none d-lg-flex">
+            <div class="col-12 col-lg-4 text-center text-lg-start my-auto">
+                <a class="navbar-brand mx-0" href="{% url 'home' %}">
+                    <img class="d-none d-sm-inline mb-2"
+                        src="https://res.cloudinary.com/lkcloud/image/upload/v1665939721/Ventdes/logo_prlhgs.png"
+                        alt="Logo" width="32">
+                    <span class="logo-font">Ventdes</span>
+                </a>
+            </div>
+            <div class="col-12 col-lg-4 text-center my-auto">
+                <form method="GET" action="/products/">
+                    <div class="input-group w-100">
+                        <input type="text" class="form-control border-amaranth015 rounded-0 input-search" name="q"
+                            placeholder="Search Ventdes site">
+                        <div class="input-group-append">
+                            <button class="form-control btn btn-search border-amaranth015 rounded-0" type="submit">
+                                <span class="icon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 col-lg-4 text-center text-lg-end">
+                <ul class="list-inline list-unstyled text-center my-0 text-lg-end">
+                    <li class="list-inline-item dropdown">
+                        <a href="#" class="nav-link" id="user-options" role="button" data-bs-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <div class="text-center">
+                                <i class="bi bi-person-fill"></i>
+                            </div>
+                            <p class="my-0">My Account</p>
+                        </a>
+                        <div class="dropdown-menu border-0 dropdown-menu-end" aria-labelledby="user-options">
+                            {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                    <a href="" class="dropdown-item"><i class="bi bi-boxes"></i> Products Management</a>
+                                    <a href="" class="dropdown-item"><i class="bi bi-folder-fill"></i> Categories Management</a>
+                                {% endif %}
+                                <a href="" class="dropdown-item"><i class="bi bi-person-fill"></i> Profile</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item"><i class="bi bi-door-open"></i>
+                                Logout</a>
+                            {% else %}
+                                <a href="{% url 'account_signup' %}" class="dropdown-item"><i
+                                    class="bi bi-pencil-square"></i> Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item"><i class="bi bi-person-fill"></i>
+                                Login</a>
+                            {% endif %}
+                        </div>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="" class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link">
+                            <div class="text-center">
+                                <div><i class="fas fa-shopping-bag"></i></div>
+                                <p class="my-0">
+                                    {% if grand_total %}
+                                        €{{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                        €0.00
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="row bg-white mx-auto">                
+                {% include 'includes/main-nav.html' %}
+            </div>
+        </div>
+       
+            
+             
     </header>
 
     {% if messages %}
