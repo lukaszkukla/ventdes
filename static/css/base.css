@@ -115,12 +115,15 @@ a {
     padding: 1rem 0 !important;
 }
 
-#hamburger:active,
-#hamburger:focus, 
-#hamburger:hover {
+.navbar-toggler,
+.navbar-toggler:active,
+.navbar-toggler:focus, 
+.navbar-toggler:hover {
     outline: none;
     box-shadow: none;
+    border: none;
 }
+
 
 .nav-link {
     padding: 1rem 2rem;
@@ -130,6 +133,11 @@ a {
 .nav-link:focus,
 .nav-link:active {
     color: var(--amaranth);
+}
+
+.bi-list {
+    font-size: 3.5rem !important;
+    color: var(--black2) !important;
 }
 
 .dropdown-item {
@@ -147,3 +155,14 @@ a {
         padding: 1rem 2rem;
     }
 }
+
+@media (max-width: 400px) {
+    .logo-image {
+        visibility: visible;
+    }
+
+    .logo-name {
+        visibility: hidden;
+    }
+}
+
