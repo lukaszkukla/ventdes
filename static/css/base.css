@@ -144,6 +144,15 @@ a {
     font-size: 1.6rem;
 }
 
+.dropdown-item:hover {
+    background: var(--amaranth);
+    color: var(--white);
+}
+
+.navbar-nav > li:hover {
+    background: var(--amaranth);
+    color: var(--white);
+}
 
 /* Media queries */
 @media (min-width: 992px) {
