@@ -1,0 +1,36 @@
+[{
+    "pk": 1,
+    "model": "products.category",
+    "fields": {
+        "name": "decorative_air_diffuser",
+        "friendly_name": "Decorative Air Diffuser"
+    }
+}, {
+    "pk": 2,
+    "model": "products.category",
+    "fields": {
+        "name": "round_air_intake_exhauster",
+        "friendly_name": "Round Air Intake and Exhauster"
+    }
+}, {
+    "pk": 3,
+    "model": "products.category",
+    "fields": {
+        "name": "circular_suspension",
+        "friendly_name": "Circular Suspension Brackets"
+    }
+}, {
+    "pk": 4,
+    "model": "products.category",
+    "fields": {
+        "name": "duct_suspension",
+        "friendly_name": "Duct Suspension"
+    }
+}, {
+    "pk": 5,
+    "model": "products.category",
+    "fields": {
+        "name": "low_noise_energy_saving_axial_fans",
+        "friendly_name": "Low-Noise Energy-Saving Axial Fans"
+    }
+}]
