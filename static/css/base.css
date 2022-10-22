@@ -160,6 +160,7 @@ a {
     color: var(--white);
 }
 
+
 /* Media queries */
 @media (min-width: 992px) {
     .header-container {
@@ -181,3 +182,8 @@ a {
     }
 }
 
+@media (max-width: 991px) {
+   .header-container {
+    padding-top: 11rem;
+   }
+}
