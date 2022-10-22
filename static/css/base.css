@@ -41,9 +41,15 @@ a {
     text-decoration: none;
 }
 
-/* ul {
-    margin: 0;
-} */
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: var(--white);
+    z-index: -1;
+}
 
 /* Buttons and inputs */
 
@@ -109,6 +115,7 @@ a {
 /* Navbar */
 .navbar {
     align-items: center;
+    padding-bottom: 0;
 }
 
 .nav-link {
@@ -123,7 +130,6 @@ a {
     box-shadow: none;
     border: none;
 }
-
 
 .nav-link {
     padding: 1rem 2rem;
