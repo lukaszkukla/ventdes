@@ -1,15 +1,23 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto text-center mx-auto">
-        <li class="nav-item my-0 px-3">
-            <a href="{% url 'products' %}" class="logo-font font-weight-bold nav-link text-black" id="products-link"
-                aria-haspopup="true" aria-expanded="false" >
+        <li class="nav-item dropdown my-0 px-3">
+            <a href="{% url 'products' %}" class="logo-font font-weight-bold nav-link text-black" id="all-products" 
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                 Products
             </a>
+            <div class="dropdown-menu border-0 mb-3" aria-labelledby="all-products">
+                <a href="{% url 'products' %}" class="dropdown-item text-center text-lg-start">All Products</a>
+                <a href="{% url 'products' %}?category=circular_suspension" class="dropdown-item text-center text-lg-start">Circular Suspension Brackets</a>
+                <a href="{% url 'products' %}?category=decorative_air_diffuser" class="dropdown-item text-center text-lg-start">Decorative Air Diffusers</a>
+                <a href="{% url 'products' %}?category=duct_suspension" class="dropdown-item text-center text-lg-start">Duct Suspension</a>
+                <a href="{% url 'products' %}?category=low_noise_energy_saving_axial_fans" class="dropdown-item text-center text-lg-start">Low-Noise Energy-Saving Axial Fans</a>
+                <a href="{% url 'products' %}?category=round_air_intake_exhauster" class="dropdown-item text-center text-lg-start">Round Air Intake and Exhauster</a>
+            </div>
         </li>
         <li class="nav-item my-0 px-3">
-            <a href="#" class="logo-font font-weight-bold nav-link text-black" id="products-link"
+            <a href="{% url 'products' %}?category=clearance" class="logo-font font-weight-bold nav-link text-black" id="products-link"
                 aria-haspopup="true" aria-expanded="false">
-                Special Offers
+                Clearance
             </a>
         </li>
         <li class="nav-item my-0 px-3">
