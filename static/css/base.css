@@ -166,6 +166,36 @@ a {
     align-items: center;
 }
 
+/* Cards */
+.card-title {
+    font-size: 1.6rem;
+}
+
+/* Icons */
+.bi-tag {
+    font-size: 1.4rem;
+}
+
+.category-badge {
+    border: 1px solid var(--amaranth);
+    border-radius: .5rem;
+}
+
+a.category-badge {
+    background: var(--white) !important;
+    color: var(--amaranth) !important;    
+}
+
+a.category-badge:hover {
+    background: var(--amaranth) !important;
+    color: var(--white) !important;
+}
+
+#sort-selector, #sort-selector:hover, #sort-selector:active, #sort-selector:focus {
+    border: 1px solid var(--amaranth) !important;
+    outline: none;
+    box-shadow: none;
+}
 
 /* Media queries */
 @media (min-width: 992px) {
