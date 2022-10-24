@@ -39,6 +39,7 @@ body {
 
 a {
     text-decoration: none;
+    color: var(--black1);
 }
 
 .overlay {
@@ -86,6 +87,21 @@ a {
     color: var(--white);
 }
 
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border: 1px solid var(--amaranth) !important;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
 .text-black {
     color: var(--black) !important;
 }
@@ -94,8 +110,25 @@ a {
     border: 1px solid var(--black1);
 }
 
+.text-amaranth {
+    color: var(--amaranth) !important;
+}
+
+.border-amarnth {
+    border: 1px solid var(--amaranth);
+}
+
+
 .border-amaranth015 {
     border: 1px solid var(--amaranth015);
+}
+
+.products-home-link,
+.products-home-link:hover,
+.products-home-link:active,
+.products-home-link:focus  {
+    color: var(--amaranth);
+    font-size: 1.6rem;
 }
 
 /* Icon centering */
@@ -191,7 +224,10 @@ a.category-badge:hover {
     color: var(--white) !important;
 }
 
-#sort-selector, #sort-selector:hover, #sort-selector:active, #sort-selector:focus {
+#sort-selector,
+#sort-selector:hover,
+#sort-selector:active,
+#sort-selector:focus {
     border: 1px solid var(--amaranth) !important;
     outline: none;
     box-shadow: none;
