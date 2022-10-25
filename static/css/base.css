@@ -199,6 +199,15 @@ a {
     align-items: center;
 }
 
+/* Form */
+.form-control:hover,
+.form-control:active,
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid var(--amaranth);
+}
+
 /* Cards */
 .card-title {
     font-size: 1.6rem;
