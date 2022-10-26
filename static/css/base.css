@@ -93,7 +93,7 @@ a {
     position: fixed;
     bottom: 10px;
     right: 10px;
-    border: 1px solid var(--amaranth) !important;
+    background: var(--amaranth);
 }
 
 .btt-link,
