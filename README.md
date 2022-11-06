@@ -356,6 +356,12 @@ Customer supplied all images for the website. Kukladev asked for the images to b
 \
 &nbsp;
 
+## Schema
+![Database Sechema](docs/schemas/ventdes_database_schema-drawSQL.png "Ventdes Database Schema")
+
+\
+&nbsp;
+
 ## Models
 
 ### Product
@@ -368,7 +374,18 @@ Customer supplied all images for the website. Kukladev asked for the images to b
 | description |  | TextField
 | price |  | DecimalField | max_digits=12, decimal_places=2
 | rating |  | DecimalField | min_value=0, max_value=5, decimal_places=1
-| image_url |  | ImageField | max_length_1024, null=True, blank=True
+| image | FK (ProductImage) | | null=True, blank=True, on_delete=models.SET_NULL
+
+\
+&nbsp;
+
+### ProductImage
+
+| Name | Key | Type | Other Details |
+| -- | -- | -- | --
+| product | FK (Product) | | null=True, blank=True, on_delete=models.SET_NULL
+| Title |  | CharField | max_length=254, null=True, unique=True, validators=[MinLengthValidator(3)]
+| image_url |  | ImageField | max_length=1024, null=True, blank=True
 | image |  | ImageField | null=True, blank=True
 
 \
@@ -380,7 +397,6 @@ Customer supplied all images for the website. Kukladev asked for the images to b
 | -- | -- | -- | -- |
 | name |  | CharField | max_length=254, validators=[MinLengthValidator(3)]
 | friendly_name |  | CharField | max_length=254, null=True, blank=True, validators=[MinLengthValidator(3)]
-
 
 \
 &nbsp;
@@ -432,6 +448,25 @@ Customer supplied all images for the website. Kukladev asked for the images to b
 | default_county |  | CharField | max_length=80, null=True, blank=True
 | default_postcode |  | CharField | max_length=20, null=False, blank=False
 | default_country |  | CountryField | null=False, blank=False
+
+### Newsletter
+| Name | Key | Type | Other Details
+| -- | -- | -- | --
+| user | ForeignKey | | null=True, blank=True
+| subscribed |  | BooleanField | 
+
+### Brand
+| Name | Key | Type | Other Details
+| -- | -- | -- | --
+| name | | CharField | max_length=254, null=True, blank=True
+| image_url |  | ImageField | max_length=1024, null=True, blank=True
+| image |  | ImageField | null=True, blank=True 
+
+### SocialMedia
+| Name | Key | Type | Other Details
+| -- | -- | -- | --
+| name | | CharField |  null=True, blank=True
+| logo_tag |  | CharField | null=True, blank=True
 
 \
 &nbsp;
