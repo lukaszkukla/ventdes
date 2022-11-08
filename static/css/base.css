@@ -57,7 +57,7 @@ a {
 
 /* Buttons and inputs */
 
-.input-search, .btn-search {
+.input-search, .btn-search, .qty_input {
     width: 100%;
     padding: .375rem .75rem;
     font-size: 1.6rem;
@@ -67,7 +67,7 @@ a {
 
 .btn-search {
     background: var(--amaranth);
-    color: white;
+    color: var(--white);
 }
 
 .btn-search:hover,
@@ -80,14 +80,37 @@ a {
 
 .btn-black {
     background: var(--black2);
-    color: white;
+    color: var(--white);
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
 }
 
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
     background: var(--black1);
-    color: var(--white);
+    color: var(--white);    
+}
+
+.btn-outline-black {
+    background: var(--white);
+    color: var(--black2) !important; /* override link colors for <a> elements */
+    border: 1px solid var(--black2);
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: var(--black2);
+    color: var(--white) !important;
 }
 
 .btt-button {

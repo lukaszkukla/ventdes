@@ -1,0 +1,20 @@
+[{
+    "pk": 1,
+    "model": "products.productimage",
+    "fields": {
+        "item": 1,
+        "title": "Tear Drops Decorative Air Diffuser",
+        "image_url": "https://res.cloudinary.com/lkcloud/image/upload/v1666390476/Ventdes/decorative-air-intake-exhauster-round-tear-drops-100-satin-white_ydv3hm.webp",
+        "image": "decorative-air-intake-exhauster-round-tear-drops-100-satin-white.webp"
+    }
+},
+{
+    "pk": 2,
+    "model": "products.productimage",
+    "fields": {
+        "item": 13,
+        "title": "Vents Quite Style Timer 100",
+        "image_url": "https://res.cloudinary.com/lkcloud/image/upload/v1666393726/Ventdes/vents-quite-style-timer-100_dmcbvu.webp",
+        "image": "vents-quite-style-timer-100.webp"
+    }
+}]
