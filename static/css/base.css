@@ -45,6 +45,22 @@ a {
     color: var(--black1);
 }
 
+h1 {
+    font-size: 3.2rem;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h4 {
+    font-size: 1.6rem;
+}
+
 .overlay {
     height: 100%;
     width: 100%;
@@ -80,8 +96,7 @@ a {
 
 .btn-black {
     background: var(--black2);
-    color: var(--white);
-    width: 100%;
+    color: var(--white);    
     padding: .375rem .75rem;
     font-size: 1.6rem;
     font-weight: 400;
@@ -98,7 +113,6 @@ a {
 .btn-amaranth {
     background: var(--amaranth);
     color: var(--white);
-    width: 100%;
     padding: .375rem .75rem;
     font-size: 1.6rem;
     font-weight: 400;
@@ -116,7 +130,6 @@ a {
     background: var(--white);
     color: var(--black2) !important; /* override link colors for <a> elements */
     border: 1px solid var(--black2);
-    width: 100%;
     padding: .375rem .75rem;
     font-size: 1.6rem;
     font-weight: 400;
@@ -127,6 +140,23 @@ a {
 .btn-outline-black:active,
 .btn-outline-black:focus {
     background: var(--black2);
+    color: var(--white) !important;
+}
+
+.btn-outline-amaranth {
+    background: var(--white);
+    color: var(--amaranth) !important; /* override link colors for <a> elements */
+    border: 1px solid var(--amaranth);
+    padding: .375rem .75rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.btn-outline-amaranth:hover,
+.btn-outline-amaranth:active,
+.btn-outline-amaranth:focus {
+    background: var(--amaranth);
     color: var(--white) !important;
 }
 
