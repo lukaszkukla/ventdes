@@ -95,6 +95,23 @@ a {
     color: var(--white);    
 }
 
+.btn-amaranth {
+    background: var(--amaranth);
+    color: var(--white);
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.btn-amaranth:hover,
+.btn-amaranth:active,
+.btn-amaranth:focus {
+    background: var(--amaranth085);
+    color: var(--white);    
+}
+
 .btn-outline-black {
     background: var(--white);
     color: var(--black2) !important; /* override link colors for <a> elements */
