@@ -36,7 +36,8 @@ body {
 }
 
 body {
-    height: 100%;
+    height: calc(100vh - 164px);
+    font-family: 'Lato';
     font-size: 1.6rem !important;
 }
 
@@ -176,19 +177,23 @@ h4 {
     cursor: pointer;
 }
 
+.btn-close {
+    font-size: 1rem;
+}
+
 /* Toasts messages */
 .message-container {
     position: fixed;
-    top: 10.2rem;
+    top: 10rem;
     right: 1.5rem;
     z-index: 99999999999;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
 
 .toast,
 .toast-header,
 .toast-body {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
 
 .custom-toast {
@@ -198,6 +203,13 @@ h4 {
 .toast-capper {
     height: 2px;
 }
+
+.cart-notification-wrapper {
+    height: 30rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 
 /* Font and border colors */
 
@@ -370,6 +382,18 @@ a.category-badge:hover {
 
     .logo-name {
         visibility: hidden;
+    }
+
+    .message-container .logo-font {
+        font-size: 1.6rem;
+    }
+
+    .message-container {
+        width: 30rem;
+    }
+
+    .cart-notification-wrapper {
+        height: 10rem;        
     }
 }
 
