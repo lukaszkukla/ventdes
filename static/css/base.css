@@ -354,6 +354,16 @@ a.category-badge:hover {
     box-shadow: none;
 }
 
+/* Checkout */
+span .checkout-element:nth-child(even) {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+div.checkout-element:last-child {
+    padding-bottom: 1rem;
+}
+
 /* Media queries */
 @media (min-width: 992px) {
     .header-container {
@@ -395,6 +405,7 @@ a.category-badge:hover {
     .cart-notification-wrapper {
         height: 10rem;        
     }
+    
 }
 
 @media (max-width: 991px) {
