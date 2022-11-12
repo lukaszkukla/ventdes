@@ -9,11 +9,13 @@ def checkout(request):
     if not cart:
         messages.error(request, "Cart is empty")
         return redirect(reverse('products'))
-    
+
     order_form = OrderForm()
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
+        'stripe_public_key': 'pk_test_51M3PG8JOPDkmAphDir9QlRcqJ36LxaMvEbHeRRNJDmSD3sfPXit2fgecVwF5H86ZsrXfIyII5jm9ywJmQTvnObHZ004sP46Mbf',
+        'client_secret': 'test client secret',
     }
-    
+
     return render(request, template, context)

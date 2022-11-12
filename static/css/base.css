@@ -8,6 +8,7 @@
     --black2: #000000;
     --grey1: #666666;
     --grey2: #737373;
+    --grey3: #AAB7C4;
     --amaranth: #B11841;
     --amaranth085: #B11841D9;
     --amaranth015: #B1184140;
@@ -404,8 +405,7 @@ div.checkout-element:last-child {
 
     .cart-notification-wrapper {
         height: 10rem;        
-    }
-    
+    }    
 }
 
 @media (max-width: 991px) {
