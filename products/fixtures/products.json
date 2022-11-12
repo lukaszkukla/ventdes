@@ -29,7 +29,7 @@
     "model": "products.product",
     "fields": {
         "sku": "DAVRSC1-100SW",
-        "name": "Start Constelation Decorative Air Diffuser",
+        "name": "Stars Constellation Decorative Air Diffuser",
         "description": "Decorative diffusers are used to supply clean or exhaust used air. They are designed for installation in the ceiling, wall, directly in the spiro ventilation duct.\" Diffusers also match the standards of plenum boxes of all manufacturers.",
         "price": 24.99,
         "category": 1,
