@@ -334,6 +334,8 @@ h4 {
     border: 1px solid var(--amaranth);
     border-radius: .5rem;
     font-size: 1.6rem;
+    padding: 0.8rem;
+    margin: 0.3rem;
 }
 
 a.category-badge {
