@@ -33,10 +33,6 @@
     font-size: 1.6rem;
 }
 
-.form-group {
-    margin-bottom: 1rem;
-}
-
 .form-check-input {
     border: 1px solid var(--amaranth085) !important;
 }
