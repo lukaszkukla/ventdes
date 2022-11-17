@@ -316,12 +316,24 @@ input, #id_default_country {
 }
 
 /* Form */
+.form>.form-group .form-control {
+    border: 1px solid var(--amaranth015) !important;
+    font-size: 1.6rem;
+}
+
 .form-control:hover,
 .form-control:active,
 .form-control:focus {
-    outline: none;
-    box-shadow: none;
+    outline: none;    
     border: 1px solid var(--amaranth);
+    box-shadow: 0 1px 3px 0 var(--amaranth);
+}
+.form>.form-group .qty_input,
+.qty_input,
+.qty_input:hover {
+    box-shadow: none !important;
+    outline: none !important;
+    border: none !important;
 }
 
 /* Cards */
@@ -438,6 +450,38 @@ div.checkout-element:last-child {
 
 .allauth-form-inner-content a {
 	color: var(--amaranth); /* text-info */
+}
+
+/* Product Form */
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.form-check-input {
+    border: 1px solid var(--amaranth);
+}
+
+.form-check-input:checked {
+    background: var(--amaranth);
+    border-color: var(--amaranth);
+    border: 1px solid var(--amaranth);
+}
+
+.form-check-input:focus, 
+.form-check-input:active {
+    border: 1px solid var(--amaranth);
+    box-shadow: 0 1px 3px 0 var(--amaranth);
 }
 
 /* Media queries */
