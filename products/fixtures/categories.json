@@ -33,4 +33,11 @@
         "name": "low_noise_energy_saving_axial_fans",
         "friendly_name": "Low-Noise Energy-Saving Axial Fans"
     }
+}, {
+    "pk": 6,
+    "model": "products.category",
+    "fields": {
+        "name": "promotions",
+        "friendly_name": "Promotions"
+    }
 }]
