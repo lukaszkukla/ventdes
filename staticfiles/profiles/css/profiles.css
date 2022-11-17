@@ -1,0 +1,38 @@
+.order-history {
+    max-height: 41.6rem; /* height of profile form + submit button */
+    overflow-y: auto;
+}
+
+.profile-form-input {
+  box-sizing: border-box;
+  height: 4rem;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid var(--amaranth015);
+  border-radius: 0px;
+  background-color: white;
+
+}
+
+.profile-form-input:hover,
+.profile-form-input:focus,
+.profile-form-input:active {
+    box-shadow: 0 1px 3px 0 var(--amaranth);
+}
+
+#profile-update-form .form-control {
+    color: var(--black2);
+}
+
+#profile-update-form input::placeholder {
+    color: var(--grey3);
+}
+
+#id_default_country,
+#id_default_country option:not(:first-child) {
+    color: var(--black2);
+}
+
+#id_default_country,
+#id_default_country option:first-child {
+    color: var(--grey3);
+}
