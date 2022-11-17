@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-7^i$2t3nqwi1q62iwbyif+9y9bi4bim@&m(qz1v9u#u81j@-$(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ventdes.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -129,12 +129,17 @@ WSGI_APPLICATION = 'ventdes.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-     'default': {
-         'ENGINE': 'django.db.backends.sqlite3',
-         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-     }
- }
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))        
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 
 # Password validation
