@@ -38,8 +38,8 @@ class Product(models.Model):
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    rating = models.DecimalField(
-        max_digits=3, decimal_places=2, null=True, blank=True
+    rating = models.IntegerField(
+        max_digits=1, null=True, blank=True
     )
     image = models.ForeignKey(
         'ProductImage', null=True, blank=True, on_delete=models.SET_NULL
