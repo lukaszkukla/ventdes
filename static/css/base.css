@@ -526,11 +526,18 @@ div.checkout-element:last-child {
         height: 10rem;        
     }
     
-    .btn.btn-outline-amaranth.rounde-0.btn-lg, 
-    .btn.btn-amaranth.rounde-0 {
+    .btn.btn-outline-amaranth.round-0.btn-lg, 
+    .btn.btn-amaranth.round-0 {
         padding: .375rem .375rem;
         font-size: 1.2rem;
-    }    
+    }
+    
+    .btn-center-cart {
+        text-align: center;
+        width: 100%;
+        display: block;
+        margin-bottom: 1rem;
+    }
 
     .increment-qty, .decrement-qty {
         padding: 0.25rem 0.5rem !important;
