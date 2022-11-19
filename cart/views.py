@@ -15,6 +15,13 @@ def view_cart(request):
 def add_to_cart(request, item_id):
     """ Add a quantity of the product to the shopping cart """
 
+    qty = request.GET.get('quantity')
+    if not qty:
+        messages.warning(
+                request, f'Qantity must be a numeric value'
+            )
+        return redirect(reverse('product_details', args=[item_id]))
+
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')

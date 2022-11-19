@@ -102,6 +102,13 @@ def checkout(request):
 
         current_cart = cart_contents(request)
         total = current_cart['grand_total']
+        if total > 250000:
+            messages.error(
+                request, "Total of your cart is over €250,000 limit for the online \
+                    purchase, please contact our office \
+                        or reduce value in the cart to proceed")
+            return redirect(reverse('view_cart'))
+
         stripe_total = round(total * 100)
         stripe.api_key = stripe_secret_key
         intent = stripe.PaymentIntent.create(

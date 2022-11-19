@@ -70,7 +70,7 @@
                             <div class="card-footer bg-white pt-0 border-0 text-start">
                                 <div class="row">
                                     <div class="col">
-                                        <p class="lead mb-0 text-start font-weight-bold">€{{ product.price }}</p>
+                                        <p class="lead mb-0 text-start font-weight-bold">€ {{ product.price }}</p>
                                         {% if product.category %}
                                             <p class="small my-0 py-2">
                                                 <a href="{% url 'products' %}?category={{ product.category.name }}" class="text-muted">
