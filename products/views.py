@@ -75,15 +75,20 @@ def add_product(request):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
-    
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             product = form.save()
-            messages.success(request, f'Successfully added product {product.name}!')
+            messages.success(
+                request, f'Successfully added product {product.name}!'
+            )
             return redirect(reverse('product_details', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(
+                request, 'Failed to add product. \
+                    Please ensure the form is valid.'
+            )
     else:
         form = ProductForm()
 
@@ -101,7 +106,7 @@ def edit_product(request, product_id):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
-    
+
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
@@ -110,7 +115,10 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_details', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(
+                request, 'Failed to update product. \
+                    Please ensure the form is valid.'
+            )
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
