@@ -4,6 +4,7 @@ from django.shortcuts import get_object_or_404
 from products.models import Product
 
 from ventdes.settings import FREE_DELIVERY_THRESHOLD
+from ventdes.settings import STANDARD_DELIVERY_PERCENTAGE
 
 
 def cart_contents(request):
@@ -12,8 +13,8 @@ def cart_contents(request):
     total = 0
     product_count = 0
     cart = request.session.get('cart', {})
-    free_delivery_threshold = settings.FREE_DELIVERY_THRESHOLD
-    standard_delivery_percentage = settings.STANDARD_DELIVERY_PERCENTAGE
+    free_delivery_threshold = FREE_DELIVERY_THRESHOLD
+    standard_delivery_percentage = STANDARD_DELIVERY_PERCENTAGE
 
     for item_id, item_data in cart.items():
         if isinstance(item_data, int):

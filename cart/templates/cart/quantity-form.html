@@ -1,21 +1,21 @@
 <form action="{% url 'adjust_cart' item.item_id %}" method="POST" class="form update-form">
     {% csrf_token %}
     <div class="form-group">
-        <div class="input-group">
+        <div class="input-group input-group-{{ item.item_id }}">
             <div class="input-group-prepend">
-                <button class="decrement-qty btn btn-sm btn-black rounded-0"
-                    data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                <button class="decrement-qty btn btn-sm btn-black rounded-0 decrement-qty_{{ item.item_id }}"
+                    data-item_id="{{ item.item_id }}" aria-label="Decrement quantity button">
                     <span>
                         <i class="bi bi-dash"></i>
                     </span>
                 </button>
             </div>
-            <input class="form-control form-control-sm qty_input text-center rounded-0"
+            <input class="form-control qty_input text-center rounded-0 id_qty_{{ item.item_id }}"
                 type="number" name="quantity" value="{{ item.quantity }}" min="1" max="9999"
-                data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                data-item_id="{{ item.item_id }}">
             <div class="input-group-append">
-                <button class="increment-qty btn btn-sm btn-black rounded-0"
-                    data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                <button class="increment-qty btn btn-sm btn-black rounded-0 increment-qty_{{ item.item_id }}"
+                    data-item_id="{{ item.item_id }}" aria-label="Increment quantity button">
                     <span>
                         <i class="bi bi-plus"></i>
                     </span>
