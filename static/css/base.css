@@ -524,7 +524,17 @@ div.checkout-element:last-child {
 
     .cart-notification-wrapper {
         height: 10rem;        
-    }    
+    }
+    
+    .btn.btn-outline-amaranth.rounde-0.btn-lg, 
+    .btn.btn-amaranth.rounde-0 {
+        padding: .375rem .375rem;
+        font-size: 1.2rem;
+    }
+
+    .increment-qty, .decrement-qty {
+        padding: 0.25rem 0.5rem !important;
+    }
 }
 
 @media (max-width: 991px) {
