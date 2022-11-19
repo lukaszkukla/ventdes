@@ -21,10 +21,17 @@ def add_to_cart(request, item_id):
     cart = request.session.get('cart', {})
 
     if item_id in list(cart.keys()):
-        cart[item_id] += quantity
-        messages.success(
-            request, f'Updated {product.name} quantity to {cart[item_id]}'
-        )
+        if cart[item_id] >= 9999:
+            cart[item_id] = 9999
+            messages.warning(
+                request, f'Updated {product.name} to maximum quantity \
+                    allowed {cart[item_id]}'
+            )
+        else:
+            cart[item_id] += quantity
+            messages.success(
+                request, f'Updated {product.name} quantity to {cart[item_id]}'
+            )
     else:
         cart[item_id] = quantity
         messages.success(request, f'Added {product.name} to the cart')
@@ -41,10 +48,20 @@ def adjust_cart(request, item_id):
     cart = request.session.get('cart', {})
 
     if quantity > 0:
+        if quantity > 9999:
+            cart[item_id] = 9999
+            messages.warning(
+                request, f'Updated {product.name} quantity to maximum allowed {cart[item_id]}'
+            )
+        else:
+            cart[item_id] = quantity
+            messages.success(
+                request, f'Updated {product.name} quantity to {cart[item_id]}'
+            )
+    elif quantity > 9999:
+        quantity = 9999
         cart[item_id] = quantity
-        messages.success(
-            request, f'Updated {product.name} quantity to {cart[item_id]}'
-        )
+
     else:
         cart.pop(item_id)
         messages.success(request, f'Removed {product.name} from the cart')
