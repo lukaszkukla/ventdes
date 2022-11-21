@@ -1,26 +1,47 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 logo-font text-black">
-                    The page you are looking for isn't available
-                </h1>
-                <div class="my-5">
-                    <h4>
-                        <a href="{% url 'products' %}" 
-                            class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">
-                                Return to shop
-                        </a>
-                    </h4>
+</div>
+<div class="container h-100">
+    <div class="row h-100">
+        <div class="col-7 col-md-6 my-auto">
+            <h1 class="display-4 logo-font text-black">
+                Ooops...
+            </h1>
+            <p>
+                404 <span class="text-smaller">- page not found</span>
+            </p>
+            <hr>
+            <p class="py-3">
+                We've searched for what you were looking for and came up empty.
+            </p>
+            <p class="text-center">
+                Don't worry, there is plenty more to choose from.
+            </p>
+
+            <div class="row center form-container g-3 pb-3">
+                <div class="col-6">
+                    <a class="btn btn-amaranth rounded-0 btn-lg" href="{% url 'home' %}">
+                        <span class="icon">
+                            <i class="fa-solid fa-house"></i>
+                        </span>
+                        <span class="text-uppercase"> Homepage</span>
+                    </a>
+                </div>
+                <div class="col-6">
+                    <a class="btn btn-amaranth rounded-0 btn-lg" href="{% url 'products' %}">
+                        <span class="icon">
+                            <i class="bi bi-caret-left-fill"></i>
+                        </span>
+                        <span class="text-uppercase">Back to Products</span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
+</div>
 {% endblock %}
