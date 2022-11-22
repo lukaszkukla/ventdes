@@ -484,10 +484,6 @@ div.checkout-element:last-child {
     box-shadow: 0 1px 3px 0 var(--amaranth);
 }
 
-.bg-404 {
-    background: url('https://ventdes20.s3.eu-west-1.amazonaws.com/media/404.png') no-repeat center center;
-}
-
 /* Media queries */
 @media (min-width: 992px) {
     .header-container {
