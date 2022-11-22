@@ -7,7 +7,7 @@
     </div>
 </div>
 <div class="container h-100">
-    <div class="row h-100">
+    <div class="row h-100 bg-404">
         <div class="col-12 text-center my-auto">
             <h1 class="display-4 logo-font text-black text-center">
                 Ooops...
@@ -23,21 +23,21 @@
                 Don't worry, there is plenty more to choose from.
             </p>
 
-            <div class="row center form-container g-3 pb-3">
-                <div class="col-6">
-                    <a class="btn btn-amaranth rounded-0 btn-lg" href="{% url 'home' %}">
-                        <span class="icon">
-                            <i class="bi bi-house-door-fill"></i>
-                        </span>
-                        <span class="text-uppercase"> Homepage</span>
-                    </a>
-                </div>
+            <div class="row center form-container g-3 pb-3">                
                 <div class="col-6">
                     <a class="btn btn-amaranth rounded-0 btn-lg" href="{% url 'products' %}">
                         <span class="icon">
                             <i class="bi bi-caret-left-fill"></i>
                         </span>
                         <span class="text-uppercase">Back to Products</span>
+                    </a>
+                </div>
+                <div class="col-6">
+                    <a class="btn btn-amaranth rounded-0 btn-lg" href="{% url 'home' %}">
+                        <span class="icon">
+                            <i class="bi bi-house-door-fill"></i>
+                        </span>
+                        <span class="text-uppercase"> Homepage</span>
                     </a>
                 </div>
             </div>
