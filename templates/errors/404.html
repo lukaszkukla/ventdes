@@ -7,14 +7,17 @@
     </div>
 </div>
 <div class="container h-100">
-    <div class="row h-100 bg-404">
-        <div class="col-12 text-center my-auto">
-            <h1 class="display-4 logo-font text-black text-center">
+    <div class="row h-100">
+        <div class="col-12 text-center"><div class="col-12 text-center py-5">
+                <img src="https://ventdes.s3.eu-west-1.amazonaws.com/media/logo.png" alt="Ventdes logo">
+            </div>
+            
+            <h1 class="text-center">
                 Ooops...
             </h1>
-            <p class="text-center">
+            <h2 class="text-center">
                 404 <span class="text-smaller">- page not found</span>
-            </p>
+            </h2>
             <hr>
             <p class="py-3">
                 We've searched for what you were looking for and came up empty.
@@ -25,7 +28,7 @@
 
             <div class="row center form-container g-3 pb-3">                
                 <div class="col-6">
-                    <a class="btn btn-amaranth rounded-0 btn-lg" href="{% url 'products' %}">
+                    <a class="btn btn-amaranth rounded-0 btn-lg btn-404" href="/products/">
                         <span class="icon">
                             <i class="bi bi-caret-left-fill"></i>
                         </span>
@@ -33,7 +36,7 @@
                     </a>
                 </div>
                 <div class="col-6">
-                    <a class="btn btn-amaranth rounded-0 btn-lg" href="{% url 'home' %}">
+                    <a class="btn btn-amaranth rounded-0 btn-lg btn-404" href="/">
                         <span class="icon">
                             <i class="bi bi-house-door-fill"></i>
                         </span>
