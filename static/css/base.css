@@ -186,6 +186,10 @@ input, #id_default_country {
     font-size: 1rem;
 }
 
+.btn-404 {
+    min-width: 19.5rem;
+}
+
 /* Toasts messages */
 .message-container {
     position: fixed;
@@ -482,6 +486,126 @@ div.checkout-element:last-child {
 .form-check-input:active {
     border: 1px solid var(--amaranth);
     box-shadow: 0 1px 3px 0 var(--amaranth);
+}
+
+/* Footer */
+
+#footer {
+    margin-top: auto;
+    width: 100%;
+    background-color: var(--black1);
+    color: var(--white);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.section-width-1200 {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/* social media links */
+
+.footer-social {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.social-media-links {
+    display: inline-block;
+    padding: 1.6rem;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    width: 10rem;
+    height: 10rem;
+    color: var(--white);
+}
+
+.social-media-links:hover {
+    -webkit-transform: translateY(8px);
+    -ms-transform: translateY(8px);
+    transform: translateY(8px);
+}
+
+/* site map */
+
+#footer .logo {
+    color: var(--white);
+    padding: 0 1rem;
+}
+
+.footer-links-inline {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0 1rem;
+    list-style: none;
+}
+
+.footer-links-text {
+    color: var(--white);
+}
+
+.footer-links-buttons-divider {
+    display: inline;
+    list-style-type: none;
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 0 1rem;
+    color: var(--white);
+}
+
+.all-rights-reserved {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.design-by-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    width: 100%;
+    margin-top: auto;
+
+}
+
+.designed-by {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: right;
+    min-height: 6rem;
+    padding-right: 1rem;
 }
 
 /* Media queries */
