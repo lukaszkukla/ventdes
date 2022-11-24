@@ -81,7 +81,7 @@
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                     <a href="{% url 'add_product' %}" class="dropdown-item"><i class="bi bi-boxes"></i> Products Management</a>
-                                    <a href="" class="dropdown-item"><i class="bi bi-folder-fill"></i> Categories Management</a>
+                                    <a href="{% url 'categories' %}" class="dropdown-item"><i class="bi bi-folder-fill"></i> Categories Management</a>
                                 {% endif %}
                                 <a href="{% url 'profile' %}" class="dropdown-item"><i class="bi bi-person-fill"></i> Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item"><i class="bi bi-door-open"></i>

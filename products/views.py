@@ -5,7 +5,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Product, Category
-from .forms import ProductForm
+from .forms import ProductForm, CategoryForm
 
 
 def all_products(request):
@@ -143,3 +143,78 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, f'Successfully deleted product {product.name}!')
     return redirect(reverse('products'))
+
+def all_categories(request):
+    """ A view to show all categories """
+
+    categories = Category.objects.all()
+    query = None
+
+    context = {        
+        'categories': categories,
+    }
+
+    return render(request, 'products/categories.html', context)
+
+
+
+@login_required
+def add_category(request):
+    """ Add a product category """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = CategoryForm(request.POST, request.FILES)
+        if form.is_valid():
+            category = form.save()
+            messages.success(
+                request, f'Successfully added category {category.name}!'
+            )
+            return redirect(reverse('categories'))
+        else:
+            messages.error(
+                request, 'Failed to add category. \
+                    Please ensure the form is valid.'
+            )
+    else:
+        form = CategoryForm()
+
+    template = 'products/add_category.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+
+def edit_category(request, category_id):
+    """ Edit a product category """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    category = get_object_or_404(Category, pk=category_id)
+    if request.method == 'POST':
+        form = CategoryForm(request.POST, request.FILES, instance=category)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated category!')
+            return redirect(reverse('categories'))
+        else:
+            messages.error(
+                request, 'Failed to update category. \
+                    Please ensure the form is valid.'
+            )
+    else:
+        form = CategoryForm(instance=category)
+        messages.info(request, f'You are editing {category.name}')
+
+    template = 'products/edit_category.html'
+    context = {
+        'form': form,
+        'category': category,
+    }
+
+    return render(request, template, context)
