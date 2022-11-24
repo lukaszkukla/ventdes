@@ -157,7 +157,6 @@ def all_categories(request):
     return render(request, 'products/categories.html', context)
 
 
-
 @login_required
 def add_category(request):
     """ Add a product category """
@@ -175,7 +174,7 @@ def add_category(request):
             return redirect(reverse('categories'))
         else:
             messages.error(
-                request, 'Failed to add category. \
+                request, f'Failed to add category {category.name}. \
                     Please ensure the form is valid.'
             )
     else:
@@ -200,11 +199,13 @@ def edit_category(request, category_id):
         form = CategoryForm(request.POST, request.FILES, instance=category)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully updated category!')
+            messages.success(
+                request, f'Successfully updated category {category.name}!'
+            )
             return redirect(reverse('categories'))
         else:
             messages.error(
-                request, 'Failed to update category. \
+                request, f'Failed to update category {category.name}. \
                     Please ensure the form is valid.'
             )
     else:
