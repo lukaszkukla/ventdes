@@ -1,6 +1,6 @@
 Hello {{ order.full_name }}!
 
-Thanks for your order! Our team is working on it. Your estimated delivery date is {{ order.date + timedelta(days=2) }}
+Thanks for your order! Our team is working on it. Your delivery will be with you within 48 hours.
 
 Your order information is below:
 

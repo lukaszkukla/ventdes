@@ -7,6 +7,17 @@ from django.db.models.functions import Lower
 from .models import Product, Category
 from .forms import ProductForm, CategoryForm
 
+import re
+
+
+def slugify(s):
+    s = s.lower().strip()
+    s = re.sub(r'[^\w\s-]', '', s)
+    s = re.sub(r'[\s_-]+', '-', s)
+    s = re.sub(r'^-+|-+$', '', s)
+
+    return s
+
 
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
