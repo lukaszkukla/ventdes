@@ -179,6 +179,7 @@ def add_category(request):
     if request.method == 'POST':
         form = CategoryForm(request.POST, request.FILES)
         if form.is_valid():
+            category.name = slugify(category.friendly_name)
             category = form.save()
             messages.success(
                 request, f'Successfully added category {category.name}!'
@@ -210,6 +211,7 @@ def edit_category(request, category_id):
     if request.method == 'POST':
         form = CategoryForm(request.POST, request.FILES, instance=category)
         if form.is_valid():
+            category.name = slugify(category.friendly_name)
             form.save()
             messages.success(request, 'Successfully updated category!')
             return redirect(reverse('categories'))
