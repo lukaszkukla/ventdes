@@ -144,13 +144,14 @@ def delete_product(request, product_id):
     messages.success(request, f'Successfully deleted product {product.name}!')
     return redirect(reverse('products'))
 
+@login_required
 def all_categories(request):
     """ A view to show all categories """
 
     categories = Category.objects.all()
     query = None
 
-    context = {        
+    context = {
         'categories': categories,
     }
 
@@ -187,7 +188,7 @@ def add_category(request):
 
     return render(request, template, context)
 
-
+@login_required
 def edit_category(request, category_id):
     """ Edit a product category """
     if not request.user.is_superuser:
@@ -219,3 +220,18 @@ def edit_category(request, category_id):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_category(request, category_id):
+    """Delete a product category"""
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    category = get_object_or_404(Category, pk=category_id)
+    category.delete()
+    messages.success(
+        request, f'Successfully deleted category {category.name}!'
+    )
+    return redirect(reverse('categories'))
