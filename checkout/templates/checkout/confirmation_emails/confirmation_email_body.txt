@@ -1,6 +1,6 @@
 Hello {{ order.full_name }}!
 
-Thanks for your order! Our team is working on it. Your estimated delivery date is {{ order.date+2 }}
+Thanks for your order! Our team is working on it. Your estimated delivery date is {{ order.date }}
 
 Your order information is below:
 
