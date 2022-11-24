@@ -7,17 +7,6 @@ from django.db.models.functions import Lower
 from .models import Product, Category
 from .forms import ProductForm, CategoryForm
 
-import re
-
-
-def slugify(s):
-    s = s.lower().strip()
-    s = re.sub(r'[^\w\s-]', '', s)
-    s = re.sub(r'[\s_-]+', '-', s)
-    s = re.sub(r'^-+|-+$', '', s)
-
-    return s
-
 
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
@@ -179,7 +168,6 @@ def add_category(request):
     if request.method == 'POST':
         form = CategoryForm(request.POST, request.FILES)
         if form.is_valid():
-            category.name = slugify(category.friendly_name)
             category = form.save()
             messages.success(
                 request, f'Successfully added category {category.name}!'
@@ -211,7 +199,6 @@ def edit_category(request, category_id):
     if request.method == 'POST':
         form = CategoryForm(request.POST, request.FILES, instance=category)
         if form.is_valid():
-            category.name = slugify(category.friendly_name)
             form.save()
             messages.success(request, 'Successfully updated category!')
             return redirect(reverse('categories'))

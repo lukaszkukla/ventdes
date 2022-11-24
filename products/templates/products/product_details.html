@@ -33,7 +33,7 @@
                 {% if product.category %}
                 <p class="small mt-1 mb-0">
                     <a href="{% url 'products' %}?category={{ product.category.name }}" class="text-muted">
-                        <i class="bi bi-tag"></i> {{ product.category.friendly_name }}
+                        <i class="bi bi-tag"></i> {{ product.category.name }}
                     </a>
                 </p>
                 {% endif %}
