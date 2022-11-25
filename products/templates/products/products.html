@@ -17,7 +17,7 @@
             <h2 class="logo-font pt-1">Products</h2>
             {% for category in current_categories %}
                 <a href="{% url 'products' %}?category={{ category.name }}" class="category-badge badge text-decoration-none rounded-1">
-                    {{ category.name }}
+                    {{ category.friendly_name }}
                 </a>
             {% endfor %}
             <hr class="w-50 mx-auto py-2">
@@ -74,7 +74,7 @@
                                         {% if product.category %}
                                             <p class="small my-0 py-2">
                                                 <a href="{% url 'products' %}?category={{ product.category.name }}" class="text-muted">
-                                                    <i class="bi bi-tag"></i> {{ product.category.name }}
+                                                    <i class="bi bi-tag"></i> {{ product.category.friendly_name }}
                                                 </a>
                                             </p>
                                         {% endif %}

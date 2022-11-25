@@ -144,6 +144,7 @@ def delete_product(request, product_id):
     messages.success(request, f'Successfully deleted product {product.name}!')
     return redirect(reverse('products'))
 
+
 @login_required
 def all_categories(request):
     """ A view to show all categories """
@@ -187,6 +188,7 @@ def add_category(request):
     }
 
     return render(request, template, context)
+
 
 @login_required
 def edit_category(request, category_id):
