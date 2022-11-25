@@ -8,4 +8,5 @@ class SubscribeNewsletterAdmin(admin.ModelAdmin):
     model = SubscribeNewsletter
     email_list = ('email', )
 
+
 admin.site.register(SubscribeNewsletter, SubscribeNewsletterAdmin)

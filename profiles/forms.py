@@ -1,4 +1,5 @@
 from django import forms
+from crispy_forms.helper import FormHelper
 from .models import UserProfile
 
 
@@ -22,9 +23,10 @@ class UserProfileForm(forms.ModelForm):
             'default_county': 'County, State or Locality',
         }
 
+        no_placeholders = ['default_country', 'subscribe_newsletter']
         self.fields['default_phone_number'].widget.attrs['autofocus'] = True
         for field in self.fields:
-            if field != 'default_country':
+            if field not in no_placeholders:
                 if self.fields[field].required:
                     placeholder = f'{placeholders[field]} *'
                 else:
@@ -32,3 +34,6 @@ class UserProfileForm(forms.ModelForm):
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'border-black rounded-0 profile-form-input'
             self.fields[field].label = False
+
+        super(UserProfileForm, self).__init__(*args, **kwargs)
+        self.fields['subscribe_newsletter'].label = 'Newsletter'

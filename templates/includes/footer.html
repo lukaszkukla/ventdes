@@ -54,7 +54,7 @@
                     </li>
                 </ul>
                 <!-- Newsletter subscription  -->
-                <form class="row" id="newsletter-form" method="post" action="">
+                <form class="row" id="newsletter-form" method="post" action="{% url 'newsletter' %}">
                     {% csrf_token %}
                     <div class="col-6">
                         {{ newsletter_form | crispy }}

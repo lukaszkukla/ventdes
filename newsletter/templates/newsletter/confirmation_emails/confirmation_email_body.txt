@@ -1,0 +1,7 @@
+Hello {{ email}},
+
+Thank you subscribing to our newsletter!
+
+Kind regards,
+
+Ventdes Team

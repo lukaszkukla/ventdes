@@ -473,10 +473,10 @@ div.checkout-element:last-child {
 }
 
 .form-check-input {
-    border: 1px solid var(--amaranth);
+    border: 1px solid var(--amaranth) !important;
 }
 
-.form-check-input:checked {
+.form-check-input:checked{
     background: var(--amaranth);
     border-color: var(--amaranth);
     border: 1px solid var(--amaranth);
@@ -484,9 +484,19 @@ div.checkout-element:last-child {
 
 .form-check-input:focus, 
 .form-check-input:active {
-    border: 1px solid var(--amaranth);
-    box-shadow: 0 1px 3px 0 var(--amaranth);
+    border: 1px solid var(--amaranth) !important;
+    box-shadow: 0 1px 3px 0 var(--amaranth) !important;
 }
+
+#div_id_subscribe_newsletter > #id_subscribe_newsletter {
+    width: 1rem !important;
+    height: 1rem !important;
+    padding: 1rem;
+}
+
+/* .form-check-label {
+    padding: 0.3rem !important;
+} */
 
 /* Footer */
 

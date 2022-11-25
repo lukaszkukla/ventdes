@@ -4,10 +4,13 @@ from .models import Product, Category
 
 
 class ProductForm(forms.ModelForm):
-
+    """Form to add new product"""
     class Meta:
         model = Product
         fields = '__all__'
+        labels = {
+            'subscribe_newsletter': 'Newsletter'
+        }
 
     image = forms.ImageField(
         label='Image', required=False, widget=CustomClearableFileInput
@@ -21,8 +24,8 @@ class ProductForm(forms.ModelForm):
         self.fields['category'].choices = friendly_names
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-amaranth rounded-0'
-            
-            
+
+
 class CategoryForm(forms.ModelForm):
 
     class Meta:

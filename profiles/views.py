@@ -1,8 +1,11 @@
 from django.shortcuts import render, get_object_or_404
+from django.core.exceptions import ObjectDoesNotExist
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import UserProfile
 from .forms import UserProfileForm
+from django.contrib.auth.models import User
+from newsletter.models import SubscribeNewsletter
 
 from checkout.models import Order
 
@@ -16,6 +19,18 @@ def profile(request):
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
             form.save()
+            user = User.objects.get(username=profile)
+            check = form.cleaned_data['subscribe_newsletter']
+            try:
+                subscribe = SubscribeNewsletter.objects.get(
+                    email=user.email
+                )
+                if not check:
+                    subscribe.delete()
+            except ObjectDoesNotExist:
+                if check:
+                    add = SubscribeNewsletter(email=user.email)
+                    add.save()
             messages.success(request, 'Profile updated successfully')
         else:
             messages.error(

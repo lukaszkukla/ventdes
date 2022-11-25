@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'cart',
     'checkout',
     'profiles',
+    'newsletter',
 
     # Other
     'crispy_forms',
@@ -88,6 +89,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
+                'newsletter.contexts.subscribe_form',
                 'cart.contexts.cart_contents',
             ],
             'builtins': [
