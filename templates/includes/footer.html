@@ -53,6 +53,17 @@
                             aria-label="email address"><i class="fas fa-envelope"></i> lukaszkukla@gmail.com</a>
                     </li>
                 </ul>
+                <!-- Newsletter subscription  -->
+                <form class="row" id="newsletter-form" method="post" action="">
+                    {% csrf_token %}
+                    <div class="col-6">
+                        {{ newsletter_form | crispy }}
+                    </div>
+                    <div class="col-6 px-0 text-end">
+                        <button type="submit" class="btn btn-amaranth rounded-0">Subscribe</button>
+                    </div>
+                </form>
+
                 <div class="text-center py-5">2022 Ventdes</div>
                 <div class="text-end pt-5">Ventdes 2022 designed by kukladev.com</div>
                 <div class="text-end pb-5">### For educational purposes only ###</div>
