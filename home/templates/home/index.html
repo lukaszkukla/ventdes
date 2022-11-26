@@ -14,10 +14,8 @@
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselHeroImage" data-bs-slide-to="0" class="active"
             aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselHeroImage" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselHeroImage" data-bs-slide-to="2"
-            aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselHeroImage" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselHeroImage" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active">
@@ -56,16 +54,22 @@
 </div>
 <div class="row w-100 text-center gx-0 py-2">
     <div class="col-md-4 bg-image px-1">
-        <img src="https://ventdes20.s3.eu-west-1.amazonaws.com/media/ventdes-orange-sale.webp"
-            class="img-fluid" alt="Orange room with grey sofa - Orange Sales Banner">
+        <a href="{% url 'products' %}?category=orange_sale">
+            <img src="https://ventdes20.s3.eu-west-1.amazonaws.com/media/ventdes-orange-sale.webp" class="img-fluid"
+                alt="Orange room with grey sofa - Orange Sales Banner">
+        </a>
     </div>
     <div class="col-md-4 bg-image px-1">
-        <img src="https://ventdes20.s3.eu-west-1.amazonaws.com/media/ventdes-blue-arrivals.webp"
-            class="img-fluid" alt="Blue room with white sofa - Blue Arrivals Banner">
+        <a href="{% url 'products' %}?category=blue_arrivals">
+        <img src="https://ventdes20.s3.eu-west-1.amazonaws.com/media/ventdes-blue-arrivals.webp" class="img-fluid"
+            alt="Blue room with white sofa - Blue Arrivals Banner">
+        </a>
     </div>
     <div class="col-md-4 bg-image px-1">
-        <img src="https://ventdes20.s3.eu-west-1.amazonaws.com/media/ventdes-green-envy-offers.webp"
-            class="img-fluid" alt="Green room with green sofas - Envy Green Offers">
+        <a href="{% url 'products' %}?category=envy_green_offers">
+            <img src="https://ventdes20.s3.eu-west-1.amazonaws.com/media/ventdes-green-envy-offers.webp"
+                class="img-fluid" alt="Green room with green sofas - Envy Green Offers">
+        </a>
     </div>
 
 
@@ -78,7 +82,7 @@
                 <img src="https://ventdes20.s3.eu-west-1.amazonaws.com/media/ventdes-trading-triangles-insitu-001.webp"
                     class="img-fluid" alt="Triangles product insitu in the room with geometric wallpaper">
             </a>
-        </div>        
+        </div>
         <div class="col-md-10 mx-auto py-3">
             <a href="https://ventdes.herokuapp.com/products/9/">
                 <img src="https://ventdes20.s3.eu-west-1.amazonaws.com/media/ventdes-trading-panther-insitu-001.webp"
