@@ -1,0 +1,7 @@
+You have received contact request from:
+
+Name: {{ name }}
+Email: {{ email }}
+
+They are looking for:
+{{ message }}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}- Contact Us {% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock page_header %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="logo-font mb-4">Contact Us</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row pb-5">
+        <div class="col-12 col-lg-6">            
+            <form class="mt-3" action="{% url 'contact' %}" method="POST" id="profile-update-form">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button class="btn btn-amaranth rounded-0 text-uppercase float-end">Contact Us</button>
+            </form>
+        </div>        
+    </div>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% endblock postloadjs %}

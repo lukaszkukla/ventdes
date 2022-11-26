@@ -46,7 +46,7 @@ def subscribe_newsletter(request):
             except BadHeaderError:
                 messages.error(
                     request, "Sorry - we are having issues with this request, \
-                               please retry later"
+                               please try again later"
                 )
         else:
             messages.warning(request,
