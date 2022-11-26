@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /profiles/
+Disallow: /cart/
+Disallow: https://ventdes.herokuapp.com/sitemap.xml

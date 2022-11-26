@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://ventdes.herokuapp.com/</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/accounts/login/</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/cart/</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/products/</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/products/?category=circular_suspension,decorative_air_diffuser,duct_suspension,low_noise_energy_saving_axial_fans,round_air_intake_exhauster,blue_arrivals,orange_sale,envy_green_offers,promotions</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/products/?category=circular_suspension</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/products/?category=decorative_air_diffuser&amp;sort=name&amp;direction=asc</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/products/?category=duct_suspension</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/products/?category=low_noise_energy_saving_axial_fans</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/products/?category=round_air_intake_exhauster</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/products/?category=promotions</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/about/</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/policy/policy/</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/contact/</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/products/?category=orange_sale</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/products/?category=blue_arrivals</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/products/?category=envy_green_offers</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/products/5/</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/products/9/</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/products/6/</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/products/2/</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/products/4/</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/products/3/</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/products/10/</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/products/18/</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/products/13/</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/products/?category=decorative_air_diffuser</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/products/7/</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/products/1/</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/products/12/</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/products/11/</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ventdes.herokuapp.com/products/8/</loc>
+  <lastmod>2022-11-26T23:50:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
