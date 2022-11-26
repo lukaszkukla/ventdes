@@ -547,8 +547,8 @@ The products details page displays additional information about the item. Here u
 User can narrow down the list of products using the search option or filtering the list by specific category, pric, rating etc. These simple yet very effective funcitons will display only items that contain searched keywords or specific filter criteria.
 
 * [Search Results](docs/features/search-results.pdf "Search Results")
-* [Filter Result](docs/features/filter-result-view.png "Filter Result")
-* [Full List](docs/features/full-list-view.png "Full List")
+* [Filter Result](docs/features/filtered-view.png "Filter Result")
+* [Full List](docs/features/no-filter-view.png "Full List")
 
 ### Footer
 
@@ -649,30 +649,37 @@ There are a few ideas that I would like to implement in the future:
 | ID |  User wants to... | Issue Number | Comments
 |--|--|--| -- |
 | 01 | Register new account | [Issue #1](https://github.com/lukaszkukla/ventdes/issues/1 "Issue #1") | User can register a new account
-| 02 | Login | [Issue #2](https://github.com/lukaszkukla/ventdes/issues/2 "Issue #2") | User can login to registered account
-| 03 | Logout | [Issue #3](https://github.com/lukaszkukla/ventdes/issues/3 "Issue #3") | User can logout from its account
-| 04 | Reset forgotten password | [Issue #4](https://github.com/lukaszkukla/ventdes/issues/4 "Issue #4") | User can reset forgotten password
-| 05 | XXXXXX | [Issue #5](https://github.com/lukaszkukla/ventdes/issues/5 "Issue #5") | XXXXXX
-| 06 | XXXXXX | [Issue #6](https://github.com/lukaszkukla/ventdes/issues/6 "Issue #6") | XXXXXX
-| 07 | XXXXXX | [Issue #7](https://github.com/lukaszkukla/ventdes/issues/7 "Issue #7") | XXXXXX
-| 08 | XXXXXX | [Issue #8](https://github.com/lukaszkukla/ventdes/issues/8 "Issue #8") | XXXXXX
-| 09 | XXXXXX | [Issue #9](https://github.com/lukaszkukla/ventdes/issues/9 "Issue #9") | XXXXXX
-| 10 | Product image | [Issue #10](https://github.com/lukaszkukla/ventdes/issues/10 "Issue #10") | Store owner / administrator can add image of a product
-| 11 | XXXXXX | [Issue #11](https://github.com/lukaszkukla/ventdes/issues/11 "Issue #11") | XXXXXX
-| 12 | XXXXXX | [Issue #12](https://github.com/lukaszkukla/ventdes/issues/12 "Issue #12") | XXXXXX
-| 13 | Contact details | [Issue #13](https://github.com/lukaszkukla/ventdes/issues/13 "Issue #13") | Contact form, active link for telephone number, email and google maps
-| 14 | View all products | [Issue #14](https://github.com/lukaszkukla/ventdes/issues/14 "Issue #14") | View of all products in the shop
+| 02 | Login and logout | [Issue #2](https://github.com/lukaszkukla/ventdes/issues/2 "Issue #2") | User can login to registered account
+| 03 | Product list view | [Issue #10](https://github.com/lukaszkukla/ventdes/issues/10 "Issue #10") | User can view a list of all products
+| 04 | Product details view | [Issue #11](https://github.com/lukaszkukla/ventdes/issues/11 "Issue #11") | User can view individual product details
+| 05 | Product filtering | [Issue #15](https://github.com/lukaszkukla/ventdes/issues/15 "Issue #15") | User can filter the products
+| 06 | Product searching | [Issue #16](https://github.com/lukaszkukla/ventdes/issues/16 "Issue #16") | User can search for products
+| 07 | Product search result view | [Issue #17](https://github.com/lukaszkukla/ventdes/issues/17 "Issue #17") | User can see what I have searched for and the number of results
+| 08 | Product sorting | [Issue #14](https://github.com/lukaszkukla/ventdes/issues/14 "Issue #14") | User can sort the list of available products
+| 09 | Promotions list view | [Issue #12](https://github.com/lukaszkukla/ventdes/issues/12 "Issue #12") | User can easily identify deals, clearance and special offers
+| 10 | Product quantity selector | [Issue #13](https://github.com/lukaszkukla/ventdes/issues/13 "Issue #13") | User can select multiple quantities of the product
+| 11 | Add to cart | [Issue #28](https://github.com/lukaszkukla/ventdes/issues/28 "Issue #28") | User can add product to the cart
+| 12 | Cart products value | [Issue #29](https://github.com/lukaszkukla/ventdes/issues/29 "Issue #29") | User can view total of the cart
+| 13 | Cart quantity selector | [Issue #30](https://github.com/lukaszkukla/ventdes/issues/30 "Issue #30") | User can select the quantity of a product when purchasing it
+| 14 | Checkout update functionality | [Issue #31](https://github.com/lukaszkukla/ventdes/issues/31 "Issue #31") | User can update quantity of the product at checkout
 | 15 | View individaul product details | [Issue #15](https://github.com/lukaszkukla/ventdes/issues/15 "Issue #15") | Detailed view of the selected product
-| 16 | View all categories | [Issue #16](https://github.com/lukaszkukla/ventdes/issues/16 "Issue #16") | Administrator can view list of all categories
-| 17 | Add category | [Issue #17](https://github.com/lukaszkukla/ventdes/issues/17 "Issue #17") | New categories can be added by administrator
-| 18 | Edit and update a category | [Issue #18](https://github.com/lukaszkukla/ventdes/issues/18 "Issue #18") | Category details can be edited and updated in the application by the administrator
-| 19 | Delete category | [Issue #19](https://github.com/lukaszkukla/ventdes/issues/19 "Issue #19") | Category can be deleted from the application by the administrator
-| 20 | XXXXXX | [Issue #20](https://github.com/lukaszkukla/ventdes/issues/20 "Issue #20") | XXXXXX
-| 21 | XXXXXX | [Issue #21](https://github.com/lukaszkukla/ventdes/issues/21 "Issue #21") | XXXXXX
-| 22 | XXXXXX | [Issue #22](https://github.com/lukaszkukla/ventdes/issues/22 "Issue #22") | XXXXXX
+| 16 | Cart charges breakdown view | [Issue #32](https://github.com/lukaszkukla/ventdes/issues/32 "Issue #32") | User can see separate info about delivery charges
+| 17 | Delivery charge field | [Issue #33](https://github.com/lukaszkukla/ventdes/issues/33 "Issue #33") | User can see if there is delivery charge threshold
+| 18 | Cart products and quantities | [Issue #34](https://github.com/lukaszkukla/ventdes/issues/34 "Issue #34") | User can view items selected for purchase
+| 19 | Add to the cart toast message | [Issue #35](https://github.com/lukaszkukla/ventdes/issues/35 "Issue #35") | User can see a confirmation message when I add product to the cart
+| 20 | Update the cart toast message | [Issue #36](https://github.com/lukaszkukla/ventdes/issues/36 "Issue #36") | User can see a confirmation message when I update the cart
+| 21 | Remove item from the cart toast message | [Issue #37](https://github.com/lukaszkukla/ventdes/issues/37 "Issue #37") | User can see a confirmation message when I remove product from the cart
+| 22 | Error toast message | [Issue #38](https://github.com/lukaszkukla/ventdes/issues/38 "Issue #38") | User can see an error message when something goes wrong
+| 23 | Stripe payments | [Issue #39](https://github.com/lukaszkukla/ventdes/issues/39 "Issue #39") | User can pay for goods
+| 24 | User profile | [Issue #42](https://github.com/lukaszkukla/ventdes/issues/42 "Issue #42") | User can view its own account details and history of previous orders
+| 25 | Store management - add new products | [Issue #44](https://github.com/lukaszkukla/ventdes/issues/44 "Issue #44") | Store manager can add new products
+| 23 | Store management - edit and update products | [Issue #45](https://github.com/lukaszkukla/ventdes/issues/45 "Issue #45") | Store manager can edit and update existing product
+| 23 | Store management - delete products | [Issue #46](https://github.com/lukaszkukla/ventdes/issues/46 "Issue #46") | Store manager can delete any product
+| 23 | Newsletter | [Issue #63](https://github.com/lukaszkukla/ventdes/issues/63 "Issue #63") | User can signup for newsletter
 | 23 | XXXXXX | [Issue #23](https://github.com/lukaszkukla/ventdes/issues/23 "Issue #23") | XXXXXX
-| 24 | View account details | [Issue #24](https://github.com/lukaszkukla/ventdes/issues/24 "Issue #24") | User can view its own account details and history of previous orders
-| 25 | Edit and update account details | [Issue #25](https://github.com/lukaszkukla/ventdes/issues/25 "Issue #25") | User can edit and update its own account details
+| 23 | XXXXXX | [Issue #23](https://github.com/lukaszkukla/ventdes/issues/23 "Issue #23") | XXXXXX
+| 23 | XXXXXX | [Issue #23](https://github.com/lukaszkukla/ventdes/issues/23 "Issue #23") | XXXXXX
+| 23 | XXXXXX | [Issue #23](https://github.com/lukaszkukla/ventdes/issues/23 "Issue #23") | XXXXXX
 
 \
 &nbsp;
