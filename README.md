@@ -547,8 +547,7 @@ The products details page displays additional information about the item. Here u
 User can narrow down the list of products using the search option or filtering the list by specific category, pric, rating etc. These simple yet very effective funcitons will display only items that contain searched keywords or specific filter criteria.
 
 * [Search Results](docs/features/search-results.pdf "Search Results")
-* [Filter Result](docs/features/filtered-view.png "Filter Result")
-* [Full List](docs/features/no-filter-view.png "Full List")
+* [Filtered Result](docs/features/filter-resutls.pdf "Filter Result")
 
 ### Footer
 
