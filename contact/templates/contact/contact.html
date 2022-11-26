@@ -24,15 +24,23 @@
     </div>
     <div class="col-sm-none col-md-2"></div>
     <div class="row">
-        <div class="col-2"></div>
-        <div class="col-8 pb-5">       
+        <div class="col-sm-none col-md-2"></div>
+        <div class="col-12 col-md-8 mx-auto">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38110.718499968345!2d-6.474584165285273!3d53.3446899244482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48677369938c80c3%3A0xa00c7a99731aae0!2sLucan%2C%20Co.%20Dublin!5e0!3m2!1sen!2sie!4v1669499325772!5m2!1sen!2sie"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                maxreferrerpolicy="no-referrer-when-downgrade" class="w-100 mx-auto map"></iframe>
+        </div>
+        <div class="col-sm-none col-md-2"></div>
+        <div class="col-sm-none col-md-2"></div>
+        <div class="col-12 col-md-8 pb-5">
             <form class="mt-3" action="{% url 'contact' %}" method="POST" id="contact-form">
                 {% csrf_token %}
                 {{ form|crispy }}
                 <button class="btn btn-amaranth rounded-0 text-uppercase float-end">Contact Us</button>
             </form>
-        </div> 
-        <div class="col-sm-none col-md-2"></div>       
+        </div>
+        <div class="col-sm-none col-md-2"></div>
     </div>
 </div>
 {% endblock %}

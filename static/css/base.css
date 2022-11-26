@@ -679,6 +679,20 @@ div.checkout-element:last-child {
     }
 }
 
+.map {
+    height: 45rem;
+}
+
+@media (max-width: 450px) {
+    .social-media-links {
+        padding: 1rem;   
+        width: 6rem;
+        height: 6rem;
+        font-size: 1.3rem;
+    }
+}
+
+
 @media (max-width: 400px) {
     .logo-image {
         visibility: visible;
@@ -719,13 +733,10 @@ div.checkout-element:last-child {
 
     .btn-404 {
         width: 100%;
-    }
+    }  
 
-    .social-media-links {
-        padding: 1rem;   
-        width: 6rem;
-        height: 6rem;
-        font-size: 1.3rem;
+    .map {
+        height: 25rem;
     }
 }
 

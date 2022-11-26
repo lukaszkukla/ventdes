@@ -513,21 +513,12 @@ Administrator can see list of all products and categories. It can edit, update a
 
 ### Homepage
 The home page is divided into sections:
-- Hero Image, with the slogan
-
-![Hero Image](docs/features/hero.png "Hero")
-
-- Deal Breakers, New Arrivals and Clearance categories
-
-![Deal Breakers, New Arrivals, Clearance](docs/features/debrenacle.png "Deal Breakers, New Arrivals, Clearance")
-
+- Hero Image Carousel, with the slogans
+- Deal Breakers, New Arrivals and Offers
 - Trending products
+- Footer
 
-![Trending](docs/features/trending.png "Trending")
-
-- Featured products
-
-![Featured Products](docs/features/fetured_products.png "Featured Products")
+![Home Page Sections](docs/features/homepage.png "Home Page Sections")
 
 ### About
 - About the company, a brief description of the company
@@ -542,9 +533,9 @@ The home page is divided into sections:
 
 ### Products
 
-The product list display all products available to purchase. Each product is displayed in the separate card. User can add single product to the cart by clicking on the basket icon on the product card. To view more details about the product click on the magnifying glass on the product card.
+The product list display all products available to purchase. Each product is displayed in the separate card. User can view product details when click on the product image in the product card.
 
-[Products List](docs/features/hazards-view.png "Products List")
+[Products List](docs/features/products-list.png "Products List")
 
 ### Product Details
 
@@ -555,19 +546,21 @@ The products details page displays additional information about the item. Here u
 ### Search and Filters
 User can narrow down the list of products using the search option or filtering the list by specific category, pric, rating etc. These simple yet very effective funcitons will display only items that contain searched keywords or specific filter criteria.
 
-* [Search Result](docs/features/search-result-view.png "Search Result")
+* [Search Results](docs/features/search-results.pdf "Search Results")
 * [Filter Result](docs/features/filter-result-view.png "Filter Result")
 * [Full List](docs/features/full-list-view.png "Full List")
 
 ### Footer
 
-The footer is responsive to adapt to various screen sizes. Each item of the footer is highlighted when user hovers over it. Logo in the footer acts as a home page (back to top). There is also information about the copyright and the designer.
+The footer is responsive to adapt to various screen sizes. Social media links drop down slightly when user hover over them. The other links in the footer are highlighted when user hovers over them. Company name in the footer acts as a home page (back to top). There is also information about the copyright and the designer.
+
+![Footer](docs/features/footer.png "Footer")
 
 ### Authentication
 
 Newly registered user will receive account verification email. There is a 24h time limit for the user to confirm the email before the link will expire.
 
-![Footer](docs/features/footer.png "Footer")
+
 
 \
 &nbsp;
@@ -580,6 +573,7 @@ Newly registered user will receive account verification email. There is a 24h ti
 There are a few ideas that I would like to implement in the future:
 * Additional user profiles and access levels -> administrator, manager, employee
 * Admin's ability to activate and deactivate accounts
+* Add to cart button on the product card in the product list view
 * Additional order status types that trigger response to customer i.e. 'in preparation', 'ready to dispatch', 'shipped'
 * Order tracking capabilities, where cusotmer can track courier status
 * Biometric login
