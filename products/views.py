@@ -222,18 +222,3 @@ def edit_category(request, category_id):
     }
 
     return render(request, template, context)
-
-
-@login_required
-def delete_category(request, category_id):
-    """Delete a product category"""
-    if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
-
-    category = get_object_or_404(Category, pk=category_id)
-    category.delete()
-    messages.success(
-        request, f'Successfully deleted category {category.name}!'
-    )
-    return redirect(reverse('categories'))
