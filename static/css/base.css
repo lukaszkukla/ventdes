@@ -80,21 +80,32 @@ input, #id_default_country {
     z-index: -1;
 }
 
-.title-overlay {
+/* Carousel */
+#carouselHeroImage {
+    max-width: 160rem;
+    margin: 0 auto;
+}
+.carousel-item img {
+    max-width: 160rem;
+    margin: 0 auto;
+}
+.carosel-heading {
+    background: #ffffffb7;
+    color: var(--black2);
+    text-align: start;
+    padding-left: 1rem;
     position: absolute;
-    top: 1rem;
-    left: 10rem;
+    bottom: 5rem;
 }
 
-.text-overlay {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-weight: bold;
-    text-align: right;
-    font-size: 30px;
-    z-index: 9;
-  }
+.text-large {
+    font-size: 4rem;
+}
+
+.deals {
+    max-width: 160rem;
+    margin: 0 auto;
+}
 
 /* Buttons and inputs */
 
@@ -517,9 +528,9 @@ div.checkout-element:last-child {
     padding: 1rem;
 }
 
-/* .form-check-label {
+.form-check-label {
     padding: 0.3rem !important;
-} */
+}
 
 /* Footer */
 

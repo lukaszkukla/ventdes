@@ -321,12 +321,15 @@ The colours will be used as described in the table below
 | Hex Value | Root variable name | Text | Button | Background | Opposite Colour
 | -- | -- | -- | -- | -- | --
 | #FFFFFF | white | X | X | X | black
-| #222222 | black | X | X | X | white
+| #222222 | black1 | X | X | X | white
+| #000000 | black2 | X | X | X | white
 | #666666 | grey-1 | X | X | X | white
 | #737373 | grey-2 | X | X | X | white
+| #AAB7C4 | grey-3 | X | X | X | black
 | #B11841 | amaranth | X | X | X | white
 | #DDDDDD | light-grey-1 | X | X | X | black
 | #F4F4F4 | light-grey-2 | X | X | X | black
+
 
 &nbsp;
 
@@ -373,8 +376,9 @@ Customer supplied all images for the website. Kukladev asked for the images to b
 | name |  | CharField | max_length=254, null=True, unique=True, validators=[MinLengthValidator(3)]
 | description |  | TextField
 | price |  | DecimalField | max_digits=12, decimal_places=2
-| rating |  | DecimalField | min_value=0, max_value=5, decimal_places=1
-| image | FK (ProductImage) | | null=True, blank=True, on_delete=models.SET_NULL
+| rating |  | DecimalField | min_value=0, max_value=5, MinValueValidator=0, MaxValueValidatror=5
+| image_url | | URLField | max_length=1024, null=True
+| image | | ImageField | null=True, blank=True
 
 \
 &nbsp;
@@ -432,7 +436,6 @@ Customer supplied all images for the website. Kukladev asked for the images to b
 | -- | -- | -- | --
 | order | ForeignKey |  | null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems'
 | product | ForeignKey |  | null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems'
-| product_size |  | CharField | null=True, blank=True
 | quantity |  | IntegerField | null=False, blank=False, default=0 
 | lineitem_total |  | DecimalField | max_digits=12, decimal_places=2, null=False, blank=False, editable=False
 
@@ -448,12 +451,12 @@ Customer supplied all images for the website. Kukladev asked for the images to b
 | default_county |  | CharField | max_length=80, null=True, blank=True
 | default_postcode |  | CharField | max_length=20, null=False, blank=False
 | default_country |  | CountryField | null=False, blank=False
+| subscribe_newsletter |  | BooleanField | default=False
 
 ### Newsletter
 | Name | Key | Type | Other Details
 | -- | -- | -- | --
-| user | ForeignKey | | null=True, blank=True
-| subscribed |  | BooleanField | 
+| email | ForeignKey | | null=True, blank=True, unique=True 
 
 ### Brand
 | Name | Key | Type | Other Details
