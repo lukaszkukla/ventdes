@@ -1,4 +1,4 @@
-<div id="footer" class="my-auto">
+<div id="footer">
     <div class="section-width-1200">
         <div class="footer-social">
             <div class="container">
@@ -6,25 +6,25 @@
 
                 <div class="footer-social">
                     <div class="row text-center">
-                        <div class="col-6 col-sm-3">
+                        <div class="col-3">
                             <a href="https://www.facebook.com/ventdes/" target="_blank" rel="noopener"
                                 class="social-media-links" aria-label="link to Facebook page">
                                 <i class="fab fa-facebook fa-3x"></i>
                             </a>
                         </div>
-                        <div class="col-6 col-sm-3">
+                        <div class="col-3">
                             <a href="https://github.com/lukaszkukla/" target="_blank" rel="noopener"
                                 class="social-media-links" aria-label="link to GitHub page">
                                 <i class="fab fa-github fa-3x"></i>
                             </a>
                         </div>
-                        <div class="col-6 col-sm-3">
+                        <div class="col-3">
                             <a href="https://gitpod.io/" target="_blank" rel="noopener" class="social-media-links"
                                 aria-label="link to GitPod page">
                                 <i class="fa-brands fa-square-git fa-3x"></i>
                             </a>
                         </div>
-                        <div class="col-6 col-sm-3">
+                        <div class="col-3">
                             <a href="https://www.linkedin.com/in/lukaszkukla/" target="_blank" rel="noopener"
                                 class="social-media-links" aria-label="link to LinkedIn channel">
                                 <i class="fab fa-linkedin fa-3x"></i>
@@ -36,7 +36,7 @@
                 <ul class="footer-links-inline">
                     <li><a href="{% url 'home' %}" class="logo" aria-label="home">Ventdes</a></li>
                     <li class="footer-links-buttons-divider"> &#47; </li>
-                    <li><a href="" class="footer-links-text"
+                    <li><a href="{% url 'about' %}" class="footer-links-text"
                             aria-label="Link to Ventdes company information page">About</a>
                     </li>
                     <li class="footer-links-buttons-divider"> &#47; </li>
@@ -56,10 +56,11 @@
                 <!-- Newsletter subscription  -->
                 <form class="row" id="newsletter-form" method="post" action="{% url 'newsletter' %}">
                     {% csrf_token %}
-                    <div class="col-6">
+                    <div class="col-md-8 col-none"></div>
+                    <div class="col-md-4 col-12">
                         {{ newsletter_form | crispy }}
                     </div>
-                    <div class="col-6 px-0 text-end">
+                    <div class="col-12 px-2 text-end">
                         <button type="submit" class="btn btn-amaranth rounded-0">Subscribe</button>
                     </div>
                 </form>

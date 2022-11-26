@@ -5,7 +5,7 @@ class SubscribeNewsletter(models.Model):
     """ Stores email addresses of subscribers """
 
     email = models.EmailField(
-        max_length=255, null=False, blank=False, unique=True
+        max_length=255, null=False, blank=False, unique=True,
     )
 
     class Meta:

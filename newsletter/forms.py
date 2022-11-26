@@ -18,3 +18,7 @@ class SubscribeNewsletterForm(forms.ModelForm):
          "class"] = "form-control"
         self.fields["email"].error_messages[
          "required"] = "Please enter a valid email address"
+
+        super(SubscribeNewsletterForm, self).__init__(*args, **kwargs)
+        self.fields['email'].label = False
+        self.fields['email'].widget.attrs.update({'placeholder': 'your@email.com'})
