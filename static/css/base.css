@@ -170,6 +170,10 @@ input, #id_default_country {
     color: var(--white) !important;
 }
 
+.btn-primary, .btn-danger {
+    font-size: 1.6rem;
+}
+
 .btt-button {
     height: 42px;
     width: 42px;

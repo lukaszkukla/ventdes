@@ -15,20 +15,24 @@
 <div class="overlay"></div>
 <div class="container">
     <div class="row">
-        <div class="col">
+        <div class="col-sm-none col-md-2"></div>
+        <div class="col-12 col-md-8">
             <hr>
-            <h2 class="logo-font mb-4">Contact Us</h2>
+            <h2 class="logo-font mb-4 text-amaranth">Contact Us</h2>
             <hr>
         </div>
     </div>
-    <div class="row pb-5">
-        <div class="col-12 col-lg-6">            
-            <form class="mt-3" action="{% url 'contact' %}" method="POST" id="profile-update-form">
+    <div class="col-sm-none col-md-2"></div>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8 pb-5">       
+            <form class="mt-3" action="{% url 'contact' %}" method="POST" id="contact-form">
                 {% csrf_token %}
                 {{ form|crispy }}
                 <button class="btn btn-amaranth rounded-0 text-uppercase float-end">Contact Us</button>
             </form>
-        </div>        
+        </div> 
+        <div class="col-sm-none col-md-2"></div>       
     </div>
 </div>
 {% endblock %}
