@@ -80,6 +80,22 @@ input, #id_default_country {
     z-index: -1;
 }
 
+.title-overlay {
+    position: absolute;
+    top: 1rem;
+    left: 10rem;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-weight: bold;
+    text-align: right;
+    font-size: 30px;
+    z-index: 9;
+  }
+
 /* Buttons and inputs */
 
 .input-search, .btn-search, .qty_input {
