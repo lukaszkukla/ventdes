@@ -488,32 +488,28 @@ The navigation bar is fully responsive to adapt to various screen sizes. It is *
 
 - Unauthenticated user view:
 
-[Mobile](docs/features/unauthenticated-mobile.png "Mobile")
-
-[Desktop](docs/features/unauthenticated-desktop.png "Desktop")
+[Unauthenticated User View](docs/features/unauthenticated-user-view.png "Unauthenticated User View")
 
 
 - Authenticated, standard user view:
 
-[Mobile](docs/features/mobile-standard-user.png "Mobile")
-
-[Desktop](docs/features/desktop-standard-user.png "Desktop")
+[Authenticated User View](docs/features/authenticated-user-view.png "Authenticated User View")
 
 Additionally authenticated user whether admin or not can see their profile and previous orders history.
 
 - Authenticated, administrator or store owner view: 
 
-[Truncated](docs/features/mobile-admin-user.png "Mobile")
-
-[Desktop](docs/features/desktop-admin-user.png "Desktop")
+[Admin Authenticatedn View](docs/features/admin-authenticated-view.png "Admin Authenticatedn View")
 
 ### Administrator
 
-Administrator can see list of all products and categories. It can edit, update and delete products and categories. Administrator can also activate and deactivate users accounts.
+Administrator can see list of all products and categories. It can edit, update and delete products. Categories can also be edited.
 
-[Administrator Dashboard](docs/features/administrator-dashboard.png "Administrator Dashboard")
+[Admin Categories Edit](docs/features/admin-category-edit.png "Admin Categories Edit")
 
-[Standard User Dashboard](docs/features/standard-user-dashboard.png "Standard User Dashboard")
+[Admin Product Add New](docs/features/admin-product-add-new.png "Admin Product Add New")
+
+[Admin Product Edit](docs/features/admin-product-edit.png "Admin Product Edit")
 
 ### Homepage
 The home page is divided into sections:
@@ -583,6 +579,7 @@ Newly registered user will receive account verification email. There is a 24h ti
 
 There are a few ideas that I would like to implement in the future:
 * Additional user profiles and access levels -> administrator, manager, employee
+* Admin's ability to activate and deactivate accounts
 * Additional order status types that trigger response to customer i.e. 'in preparation', 'ready to dispatch', 'shipped'
 * Order tracking capabilities, where cusotmer can track courier status
 * Biometric login

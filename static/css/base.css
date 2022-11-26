@@ -353,6 +353,10 @@ input, #id_default_country {
     align-items: center;
 }
 
+.dropdown-menu-end[data-bs-popper] {
+    right: inherit;
+}
+
 /* Form */
 .form>.form-group .form-control {
     border: 1px solid var(--amaranth015) !important;
