@@ -34,6 +34,7 @@ class UserProfile(models.Model):
         blank_label='Country', null=True, blank=True
     )
     subscribe_newsletter = models.BooleanField(default=False)
+    test_field = models.BooleanField(default=True)
 
     def __str__(self):
         return self.user.username
