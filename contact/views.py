@@ -45,7 +45,7 @@ def contact(request):
             user = User.objects.get(username=request.user)
             user_profile = get_object_or_404(UserProfile, user=user)
             form = ContactUsForm(
-                initial={'email': user.email, 'name': user_profile.full_name}
+                initial={'email': user.email, 'name': user_profile.user}
             )
         except ObjectDoesNotExist:
             form = ContactUsForm()
