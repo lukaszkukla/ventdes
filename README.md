@@ -675,10 +675,6 @@ There are a few ideas that I would like to implement in the future:
 | 23 | Store management - edit and update products | [Issue #45](https://github.com/lukaszkukla/ventdes/issues/45 "Issue #45") | Store manager can edit and update existing product
 | 23 | Store management - delete products | [Issue #46](https://github.com/lukaszkukla/ventdes/issues/46 "Issue #46") | Store manager can delete any product
 | 23 | Newsletter | [Issue #63](https://github.com/lukaszkukla/ventdes/issues/63 "Issue #63") | User can signup for newsletter
-| 23 | XXXXXX | [Issue #23](https://github.com/lukaszkukla/ventdes/issues/23 "Issue #23") | XXXXXX
-| 23 | XXXXXX | [Issue #23](https://github.com/lukaszkukla/ventdes/issues/23 "Issue #23") | XXXXXX
-| 23 | XXXXXX | [Issue #23](https://github.com/lukaszkukla/ventdes/issues/23 "Issue #23") | XXXXXX
-| 23 | XXXXXX | [Issue #23](https://github.com/lukaszkukla/ventdes/issues/23 "Issue #23") | XXXXXX
 
 \
 &nbsp;
@@ -827,13 +823,24 @@ All HTML files were tested using browser's "View page source" function due to dj
 
 | Issue Number |  Title | Comments 
 |--|--|--|
-| [Issue #94](https://github.com/lukaszkukla/ventdes/issues/94 "Issue #94") | View hazard detail of other users | Admin can edit the hazard but error occurs when viewing  |
-| [Issue #90](https://github.com/lukaszkukla/ventdes/issues/90 "Issue #90") | CRUD categories, risks and statuses | Every user can view, edit and delete categories, risks and statuses through frontend panel.  |
-| [Issue #84](https://github.com/lukaszkukla/ventdes/issues/84 "Issue #84") | Logged user can access register page | User that is logged in can access registration page by entering path in address bar.  |
-| [Issue #87](https://github.com/lukaszkukla/ventdes/issues/87 "Issue #87") | Unauthenticated user can access profile and profile/edit | Unauthenticated user can access profile and profile/edit by through browser's address bar  |
-| [Issue #72](https://github.com/lukaszkukla/ventdes/issues/72 "Issue #72") | CSRF verification failed. Request aborted | CSRF totken missing from add hazard form  |
-| [Issue #83](https://github.com/lukaszkukla/ventdes/issues/83 "Issue #83") | Edit and update image | Image does not update on save. |
-| [Issue #71](https://github.com/lukaszkukla/ventdes/issues/71 "Issue #71") | Improperly configured hazard-create | ModelFormMixin throws an error |
+| [Issue #64](https://github.com/lukaszkukla/ventdes/issues/64 "Issue #64") | Embedded Google maps have no title that affects accessibility performance.  |
+| [Issue #62](https://github.com/lukaszkukla/ventdes/issues/62 "Issue #62") | Stripe payment 500 error | Stripe website showing 500 error when processing payments after recent update.  |
+| [Issue #52](https://github.com/lukaszkukla/ventdes/issues/52 "Issue #52") | Profile link on mobile size | Profile link on mobile size is not redirecting user to profile screen. |
+| [Issue #51](https://github.com/lukaszkukla/ventdes/issues/51 "Issue #51") | Product addition - frontend | NoReverse match error appear when trying to save product. |
+| [Issue #41](https://github.com/lukaszkukla/ventdes/issues/41 "Issue #41") | Stripe webhooks failing | When processing the payment for the order Stripe webhooks succeed but return 401 error.  |
+| [Issue #27](https://github.com/lukaszkukla/ventdes/issues/27 "Issue #27") | Cart text spacing | A clear and concise description of what the bug is.  |
+| [Issue #26](https://github.com/lukaszkukla/ventdes/issues/26 "Issue #26") | Search bar mobile | Search bar on mobile device is too small.  |
+| [Issue #24](https://github.com/lukaszkukla/ventdes/issues/24 "Issue #24") | Filter by category | Product page filtered by category display ERR_HTTP2_PROTOCOL_ERROR  |
+| [Issue #23](https://github.com/lukaszkukla/ventdes/issues/23 "Issue #23") | Carousel image partially hidden on mobile | Part of the hero image is hidden behind navbar on mobile devices.  |
+| [Issue #22](https://github.com/lukaszkukla/ventdes/issues/22 "Issue #22") | Unexpected keyword argument | Image on product card does not load.  |
+| [Issue #9](https://github.com/lukaszkukla/ventdes/issues/9 "Issue #9") | Navbar links are not aligning in center | Navbar links to other pages are aligned left.  |
+| [Issue #72](https://github.com/lukaszkukla/ventdes/issues/72 "Issue #72") | XXXXXXXXXXX | OOOOOOOOOOOOOOO  |
+| [Issue #72](https://github.com/lukaszkukla/ventdes/issues/72 "Issue #72") | XXXXXXXXXXX | OOOOOOOOOOOOOOO  |
+| [Issue #72](https://github.com/lukaszkukla/ventdes/issues/72 "Issue #72") | XXXXXXXXXXX | OOOOOOOOOOOOOOO  |
+| [Issue #72](https://github.com/lukaszkukla/ventdes/issues/72 "Issue #72") | XXXXXXXXXXX | OOOOOOOOOOOOOOO  |
+| [Issue #72](https://github.com/lukaszkukla/ventdes/issues/72 "Issue #72") | XXXXXXXXXXX | OOOOOOOOOOOOOOO  |
+| [Issue #72](https://github.com/lukaszkukla/ventdes/issues/72 "Issue #72") | XXXXXXXXXXX | OOOOOOOOOOOOOOO  |
+
 
 \
 &nbsp;
