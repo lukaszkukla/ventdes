@@ -40,8 +40,8 @@ Live link can be found here - [Ventdes](https://ventdes.herokuapp.com/ "Ventdes"
     * Languages
     * Libraries, Frameworks and Tools
 * [Testing](#testing "Testing")
-    * UX Testing
     * Manual Testing
+    * Lighthouse Testing
     * Code Validation
     * Bugs
     * Unfixed Bugs
@@ -643,7 +643,7 @@ There are a few ideas that I would like to implement in the future:
 \
 &nbsp;
 
-### UX Testing
+### Manual Testing
 
 | ID |  User wants to... | Issue Number | Comments
 |--|--|--| -- |
@@ -672,9 +672,13 @@ There are a few ideas that I would like to implement in the future:
 | 23 | Stripe payments | [Issue #39](https://github.com/lukaszkukla/ventdes/issues/39 "Issue #39") | User can pay for goods
 | 24 | User profile | [Issue #42](https://github.com/lukaszkukla/ventdes/issues/42 "Issue #42") | User can view its own account details and history of previous orders
 | 25 | Store management - add new products | [Issue #44](https://github.com/lukaszkukla/ventdes/issues/44 "Issue #44") | Store manager can add new products
-| 23 | Store management - edit and update products | [Issue #45](https://github.com/lukaszkukla/ventdes/issues/45 "Issue #45") | Store manager can edit and update existing product
-| 23 | Store management - delete products | [Issue #46](https://github.com/lukaszkukla/ventdes/issues/46 "Issue #46") | Store manager can delete any product
-| 23 | Newsletter | [Issue #63](https://github.com/lukaszkukla/ventdes/issues/63 "Issue #63") | User can signup for newsletter
+| 26 | Store management - edit and update products | [Issue #45](https://github.com/lukaszkukla/ventdes/issues/45 "Issue #45") | Store manager can edit and update existing product
+| 27 | Store management - delete products | [Issue #46](https://github.com/lukaszkukla/ventdes/issues/46 "Issue #46") | Store manager can delete any product
+| 28 | Newsletter | [Issue #63](https://github.com/lukaszkukla/ventdes/issues/63 "Issue #63") | User can signup for newsletter
+| 29 | Cart quantity | [Issue #66](https://github.com/lukaszkukla/ventdes/issues/66 "Issue #66") | User is not allowed to have more than 9999 units of a single product in the cart
+| 30 | Maximum cart value | [Issue #67](https://github.com/lukaszkukla/ventdes/issues/67 "Issue #67") | Maximum value of single transaction is limited to €250,000. User is warned if this is exceeded.
+| 31 | Order processing | [Issue #68](https://github.com/lukaszkukla/ventdes/issues/68 "Issue #68") | Process order and receive email confirmation
+| 32 | Register, login, logout, reset password | [Issue #69](https://github.com/lukaszkukla/ventdes/issues/69 "Issue #69") | Full cycle from registering the account to passwrod recovery
 
 \
 &nbsp;
@@ -691,34 +695,11 @@ This is the part I have been struggling with and will have to spend a bit more t
 \
 &nbsp;
 
-## Manual Testing
+## Lighthouse Testing
 
-| Issue Number |  Title | Comments 
-|--|--|--|
-| [Issue 65#](https://github.com/lukaszkukla/ventdes/issues/65 "Issue #65") | Lightouse | Testing with Google Lighthouse |
-| [Issue 11#](https://github.com/lukaszkukla/ventdes/issues/11 "Issue #11") | Password reset | Password reset was not sending email |
-| [Issue 117#](https://github.com/lukaszkukla/ventdes/issues/117 "Issue #117") | Hazard view cards | Add space around cards |
-| [Issue 102#](https://github.com/lukaszkukla/ventdes/issues/102 "Issue #102") | Fixed navbar | Navbar should scroll with the website |
-| [Issue 109#](https://github.com/lukaszkukla/ventdes/issues/109 "Issue #109") | Admin functions | Links to admin section are missing from navbar |
-| [Issue 113#](https://github.com/lukaszkukla/ventdes/issues/113 "Issue #113") | Navbar responiveness | Expand navbar on larger devices |
-| [Issue 103#](https://github.com/lukaszkukla/ventdes/issues/103 "Issue #103") | Homepage layout | Change layout to align better for bigger screens |
-| [Issue 104#](https://github.com/lukaszkukla/ventdes/issues/104 "Issue #104") | Contact form | Form clears on submission and does not indicate that form was submitted |
-| [Issue 116#](https://github.com/lukaszkukla/ventdes/issues/116 "Issue #116") | Footer links | Default HTML color on hoover must be changed |
-| [Issue 105#](https://github.com/lukaszkukla/ventdes/issues/105 "Issue #105") | Card image | Card dimensions expand with the image size |
-| [Issue 114#](https://github.com/lukaszkukla/ventdes/issues/114 "Issue #114") | Hazard list view | Card buttons must be change for large screens |
-| [Issue 110#](https://github.com/lukaszkukla/ventdes/issues/110 "Issue #110") | Admin menu | Customer wants to change name of dropdown list |
-| [Issue 106#](https://github.com/lukaszkukla/ventdes/issues/106 "Issue #106") | Hazard detailed view | View is too wide on large screens |
-| [Issue 111#](https://github.com/lukaszkukla/ventdes/issues/111 "Issue #111") | Hazard description | Add placeholder for missing description |
-| [Issue 121#](https://github.com/lukaszkukla/ventdes/issues/121 "Issue #121") | Privacy policy | This page is missing styling |
-| [Issue 120#](https://github.com/lukaszkukla/ventdes/issues/120 "Issue #120") | Action messages | Add messages to confirm user's actions |
-| [Issue 107#](https://github.com/lukaszkukla/ventdes/issues/107 "Issue #107") | Hazard list view | Customer wants status to be visible |
-| [Issue 108#](https://github.com/lukaszkukla/ventdes/issues/108 "Issue #108") | Button label | Customer wants every button to have label |
-| [Issue 122#](https://github.com/lukaszkukla/ventdes/issues/122 "Issue #122") | Profile dropdown | Includ dropdown in navbar for user profile and logout |
-| [Issue 112#](https://github.com/lukaszkukla/ventdes/issues/112 "Issue #112") | Category list view | Long description expand the card in list view |
-| [Issue 115#](https://github.com/lukaszkukla/ventdes/issues/115 "Issue #115") | Search and pagination | Django only allows one of them at the time, remove pagination |
-| [Issue 119#](https://github.com/lukaszkukla/ventdes/issues/119 "Issue #119") | Product detailed view labels | Must be bolder to stand out from the rest |
-| [Issue 123#](https://github.com/lukaszkukla/ventdes/issues/123 "Issue #123") | Contact form links | Must be active links |
-| [Issue 118#](https://github.com/lukaszkukla/ventdes/issues/118 "Issue #118") | Product detailed view | Status and risk must be aligned on the same level |
+| Issue Number |  Title | Link | Comments 
+|--|--|--|--|
+| 00 | Lightouse | [Issue 65#](https://github.com/lukaszkukla/ventdes/issues/65 "Issue #65") |  Testing with Google Lighthouse |
 
 
 \

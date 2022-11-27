@@ -70,6 +70,10 @@ input, #id_default_country {
     font-size: 1.6rem !important;
 }
 
+textarea {
+    font-size: 1.6rem !important;
+}
+
 .overlay {
     height: 100%;
     width: 100%;
