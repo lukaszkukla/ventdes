@@ -735,34 +735,19 @@ All HTML files were tested using browser's "View page source" function due to dj
 
 | File Name | File Path | Result | W3C | Comments |
 |--|--|--|--|--|
-| index.html | hazard/templates/pages/index.html | PASS | [link](docs/validation/html/index.png "link") ||
-| register.html | hazard/templates/components/auth/register.html | PASS | [link](docs/validation/html/register.png "link") ||
-| login.html | hazard/templates/components/auth/login.html | PASS | [link](docs/validation/html/login.png "link") ||
-| hazard_view.html | hazard/templates/components/hazard/hazard_view.html | PASS | [link](docs/validation/html/hazard-list-view.png "link") ||
-| hazard_create.html | hazard/templates/components/hazard/hazard_create.html | PASS | [link](docs/validation/html/hazard-add-new.png "link") ||
-| hazard_detail_view.html | hazard/templates/components/hazard/hazard_detail_view.html | PASS | [link](docs/validation/html/hazard-details.png "link") ||
-| hazard_update.html | hazard/templates/components/hazard/hazard_update.html | PASS | [link](docs/validation/html/hazard-update.png "link") ||
-| hazard_delete.html | hazard/templates/components/hazard/hazard_delete.html | PASS | [link](docs/validation/html/hazard-delete.png "link") ||
-| profile_view.html | hazard/templates/components/profile/profile_view.html | PASS | [link](docs/validation/html/profile-view.png "link") ||
-| profile_update.html | hazard/templates/components/profile/profile_update.html | PASS | [link](docs/validation/html/profile-update.png "link") ||
-| password_change.html | hazard/templates/components/password/password_change.html | PASS | [link](docs/validation/html/password-change.png "link") ||
-| password_reset.html | hazard/templates/components/password/password_reset.html | PASS | [link](docs/validation/html/password-reset-001.png "link") ||
-| password_reset_done.html | hazard/templates/components/password/password_done.html | PASS | [link](docs/validation/html/password-reset-002.png "link") ||
-| password_reset_confirm.html | hazard/templates/components/password/password_confirm.html | PASS | [link](docs/validation/html/password-reset-003.png "link") ||
-| password_reset_complete.html | hazard/templates/components/password/password_complete.html | PASS | [link](docs/validation/html/password-reset-004.png "link") ||
-| category_view.html | hazard/templates/components/category/category_view.html | PASS | [link](docs/validation/html/category-list-view.png "link") ||
-| category_create.html | hazard/templates/components/category/category_create.html | PASS | [link](docs/validation/html/category-add-new.png "link") ||
-| category_update.html | hazard/templates/components/category/category_update.html | PASS | [link](docs/validation/html/category-update.png "link") ||
-| category_delete.html | hazard/templates/components/category/category_delete.html | PASS | [link](docs/validation/html/category-delete.png "link") ||
-| risk_view.html | hazard/templates/components/risk/risk_view.html | PASS | [link](docs/validation/html/risk-list-view.png "link") ||
-| risk_create.html | hazard/templates/components/risk/risk_create.html | PASS | [link](docs/validation/html/risk-add-new.png "link") ||
-| risk_update.html | hazard/templates/components/risk/risk_update.html | PASS | [link](docs/validation/html/risk-update.png "link") ||
-| risk_delete.html | hazard/templates/components/risk/risk_delete.html | PASS | [link](docs/validation/html/risk-delete.png "link") ||
-| status_view.html | hazard/templates/components/status/status_view.html | PASS | [link](docs/validation/html/status-list-view.png "link") ||
-| status_create.html | hazard/templates/components/status/status_create.html | PASS | [link](docs/validation/html/status-add-new.png "link") ||
-| status_update.html | hazard/templates/components/status/status_update.html | PASS | [link](docs/validation/html/status-update.png "link") ||
-| status_delete.html | hazard/templates/components/status/status_delete.html | PASS | [link](docs/validation/html/status-delete.png "link") ||
-| 400.html | hazard/templates/pages/404.html | PASS | [link](docs/validation/html/400.png "link") ||
+| index.html | /ventdes/home/templates/home/html-markup-test-index.html | PASS | [link](docs/validation/html/home.png "link") ||
+| index.html | /ventdes/products/templates/products/products.html | PASS | [link](docs/validation/html/html-markup-test-products.png "link") ||
+| index.html | /ventdes/cart/templates/cart/cart.html | PASS | [link](docs/validation/html/html-markup-test-cart.png "link") ||
+| index.html | /ventdes/checkout/templates/checkout/checkout.html | PASS | [link](docs/validation/html/html-markup-test-checkout.png "link") ||
+| index.html | /ventdes/home/templates/home/html-markup-test-about.html | PASS | [link](docs/validation/html/about.png "link") ||
+| index.html | /ventdes/policy/templates/policy/privacy.html | PASS | [link](docs/validation/html/html-markup-test-privacy-policy.png "link") ||
+| index.html | /ventdes/contact/templates/contact/html-markup-test-contact.html | PASS | [link](docs/validation/html/contact.png "link") ||
+| index.html | /ventdes/profiles/templates/profiles/profile.html | PASS | [link](docs/validation/html/html-markup-test-profile.png "link") ||
+| index.html | /ventdes/products/templates/products/add_product.html | PASS | [link](docs/validation/html/html-markup-test-products-add-new.png "link") ||
+| index.html | /ventdes/ | PASS | [link](docs/validation/html/html-markup-test-.png "link") ||
+| index.html | /ventdes/ | PASS | [link](docs/validation/html/html-markup-test-.png "link") ||
+| index.html | /ventdes/ | PASS | [link](docs/validation/html/html-markup-test-.png "link") ||
+
 
 
 \
