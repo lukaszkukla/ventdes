@@ -160,37 +160,6 @@ def all_categories(request):
 
 
 @login_required
-def add_category(request):
-    """ Add a product category """
-    if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
-
-    if request.method == 'POST':
-        form = CategoryForm(request.POST, request.FILES)
-        if form.is_valid():
-            category = form.save()
-            messages.success(
-                request, f'Successfully added category {category.name}!'
-            )
-            return redirect(reverse('categories'))
-        else:
-            messages.error(
-                request, f'Failed to add category {category.name}. \
-                    Please ensure the form is valid.'
-            )
-    else:
-        form = CategoryForm()
-
-    template = 'products/add_category.html'
-    context = {
-        'form': form,
-    }
-
-    return render(request, template, context)
-
-
-@login_required
 def edit_category(request, category_id):
     """ Edit a product category """
     if not request.user.is_superuser:

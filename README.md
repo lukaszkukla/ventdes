@@ -744,9 +744,14 @@ All HTML files were tested using browser's "View page source" function due to dj
 | index.html | /ventdes/contact/templates/contact/html-markup-test-contact.html | PASS | [link](docs/validation/html/contact.png "link") ||
 | index.html | /ventdes/profiles/templates/profiles/profile.html | PASS | [link](docs/validation/html/html-markup-test-profile.png "link") ||
 | index.html | /ventdes/products/templates/products/add_product.html | PASS | [link](docs/validation/html/html-markup-test-products-add-new.png "link") ||
-| index.html | /ventdes/ | PASS | [link](docs/validation/html/html-markup-test-.png "link") ||
-| index.html | /ventdes/ | PASS | [link](docs/validation/html/html-markup-test-.png "link") ||
-| index.html | /ventdes/ | PASS | [link](docs/validation/html/html-markup-test-.png "link") ||
+| index.html | /ventdes/products/templates/products/edit_product.html | PASS | [link](docs/validation/html/html-markup-test-products-edit.png "link") ||
+| index.html | /ventdes/products/templates/products/categories.html | PASS | [link](docs/validation/html/html-markup-test-categories.png "link") ||
+| index.html | /ventdes/products/templates/products/edit_category.html | PASS | [link](docs/validation/html/html-markup-test-categories-edit.png "link") ||
+| index.html | /ventdes/ | PASS | [link](docs/validation/html/xxxxxxxxxx.png "link") ||
+| index.html | /ventdes/ | PASS | [link](docs/validation/html/xxxxxxxxxx.png "link") ||
+| index.html | /ventdes/ | PASS | [link](docs/validation/html/xxxxxxxxxx.png "link") ||
+| index.html | /ventdes/ | PASS | [link](docs/validation/html/xxxxxxxxxx.png "link") ||
+| index.html | /ventdes/ | PASS | [link](docs/validation/html/xxxxxxxxxx.png "link") ||
 
 
 
