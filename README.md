@@ -699,7 +699,7 @@ This is the part I have been struggling with and will have to spend a bit more t
 
 | Issue Number |  Title | Comments 
 |--|--|--|
-| [Issue 40#](https://github.com/lukaszkukla/ventdes/issues/40 "Issue #40") | Lightouse | Testing with Google Lighthouse |
+| [Issue 65#](https://github.com/lukaszkukla/ventdes/issues/65 "Issue #65") | Lightouse | Testing with Google Lighthouse |
 | [Issue 11#](https://github.com/lukaszkukla/ventdes/issues/11 "Issue #11") | Password reset | Password reset was not sending email |
 | [Issue 117#](https://github.com/lukaszkukla/ventdes/issues/117 "Issue #117") | Hazard view cards | Add space around cards |
 | [Issue 102#](https://github.com/lukaszkukla/ventdes/issues/102 "Issue #102") | Fixed navbar | Navbar should scroll with the website |

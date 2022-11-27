@@ -4,7 +4,7 @@ from django.db import models
 class SubscribeNewsletter(models.Model):
     """ Stores email addresses of subscribers """
 
-    email = models.EmailField(
+    newsletter_email = models.EmailField(
         max_length=255, null=False, blank=False, unique=True,
     )
 

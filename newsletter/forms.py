@@ -12,13 +12,13 @@ class SubscribeNewsletterForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields["email"].widget.attrs[
+        self.fields["newsletter_email"].widget.attrs[
          "placeholder"] = "your@email.com"
-        self.fields["email"].widget.attrs[
+        self.fields["newsletter_email"].widget.attrs[
          "class"] = "form-control"
-        self.fields["email"].error_messages[
+        self.fields["newsletter_email"].error_messages[
          "required"] = "Please enter a valid email address"
 
         super(SubscribeNewsletterForm, self).__init__(*args, **kwargs)
-        self.fields['email'].label = False
-        self.fields['email'].widget.attrs.update({'placeholder': 'your@email.com'})
+        self.fields['newsletter_email'].label = False
+        self.fields['newsletter_email'].widget.attrs.update({'placeholder': 'your@email.com'})

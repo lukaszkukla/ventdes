@@ -23,7 +23,7 @@ def subscribe_newsletter(request):
             form.save()
             confirmation_msg = 'Thank you for signing up!'
             sender = settings.EMAIL_HOST_USER
-            recipient = [form.cleaned_data['email']]
+            recipient = [form.cleaned_data['newsletter_email']]
             email_subject = confirmation_msg
             email_body = render_to_string(
                 'newsletter/confirmation_emails/confirmation_email_body.txt'
@@ -31,7 +31,7 @@ def subscribe_newsletter(request):
 
             try:
                 existing_user = User.objects.get(email=form.cleaned_data[
-                                                'email'])
+                                                'newsletter_email'])
             except ObjectDoesNotExist:
                 existing_user = None
 
