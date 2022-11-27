@@ -69,7 +69,9 @@ def checkout(request):
                         )
                         order_line_item.save()
                     else:
-                        for size, quantity in item_data['items_by_size'].items():
+                        for size, quantity in item_data[
+                            'items_by_size'
+                        ].items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
@@ -104,7 +106,8 @@ def checkout(request):
         total = current_cart['grand_total']
         if total > 250000:
             messages.error(
-                request, "Total of your cart is over €250,000 limit for the online \
+                request, "Total of your cart is over \
+                    €250,000 limit for the online \
                     purchase, please contact our office \
                         or reduce value in the cart to proceed")
             return redirect(reverse('view_cart'))

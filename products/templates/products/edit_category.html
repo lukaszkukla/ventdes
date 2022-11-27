@@ -47,12 +47,4 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<script>
-    function convertFromFriendlyName(Text) {
-    return Text.toLowerCase()
-                .replace(/[^\w ]+/g, '')
-                .replace(/ +/g, '-');
-    }
-</script>
-
 {% endblock postloadjs %}

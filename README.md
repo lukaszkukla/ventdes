@@ -747,12 +747,6 @@ All HTML files were tested using browser's "View page source" function due to dj
 | index.html | /ventdes/products/templates/products/edit_product.html | PASS | [link](docs/validation/html/html-markup-test-products-edit.png "link") ||
 | index.html | /ventdes/products/templates/products/categories.html | PASS | [link](docs/validation/html/html-markup-test-categories.png "link") ||
 | index.html | /ventdes/products/templates/products/edit_category.html | PASS | [link](docs/validation/html/html-markup-test-categories-edit.png "link") ||
-| index.html | /ventdes/ | PASS | [link](docs/validation/html/xxxxxxxxxx.png "link") ||
-| index.html | /ventdes/ | PASS | [link](docs/validation/html/xxxxxxxxxx.png "link") ||
-| index.html | /ventdes/ | PASS | [link](docs/validation/html/xxxxxxxxxx.png "link") ||
-| index.html | /ventdes/ | PASS | [link](docs/validation/html/xxxxxxxxxx.png "link") ||
-| index.html | /ventdes/ | PASS | [link](docs/validation/html/xxxxxxxxxx.png "link") ||
-
 
 
 \
@@ -761,8 +755,9 @@ All HTML files were tested using browser's "View page source" function due to dj
 ### CSS
 | File Name | File Path | Result | W3C | Comments |
 |--|--|--|--|--|
-| styles.css | static/css/styles.css | PASS | [link](docs/validation/css/styles.png "link") |[49 warnings](docs/validation/css/styles-warnings.png "link")|
-*all warnings are marked with "is a vendor extension" these were added when CSS code was run through [Autoprefixer](https://autoprefixer.github.io/ "Autoprefixer") for web browser compability purposes*
+| base.css | static/css/base.css | PASS | [link](docs/validation/css/base.png "link") ||
+| base.css | profiles/static/profiles/css/profiles.css | PASS | [link](docs/validation/css/css-test-profiles.png "link") ||
+| base.css | checkout/static/checkout/css/checkout.css | PASS | [link](docs/validation/css/css-test-checkout.png "link") ||
 
 \
 &nbsp; 
@@ -770,7 +765,15 @@ All HTML files were tested using browser's "View page source" function due to dj
 ### JS
 | File Name | File Path | Result | JSHint | Comments |
 |--|--|--|--|--|
-| app.js | static/js/app.js | PASS | [link](docs/validation/js/app.png "link") ||
+| app.js | templates/allauth/account/email.html | PASS | [link](docs/validation/js/js-test-email.png "link") ||
+| app.js | products/templates/products/products.html | PASS | [link](docs/validation/js/js-test-products-002.png "link") ||
+| app.js | products/templates/products/includes/quantity_input_script.html | PASS | [link](docs/validation/js/js-test-quantity-input-script.png "link") ||
+| app.js | products/templates/products/add_product.html | PASS | [link](docs/validation/js/js-test-add-product.png "link") ||
+| app.js | products/static/products/js/script.js | PASS | [link](docs/validation/js/js-test-products-001.png "link") ||
+| app.js | cart/templates/cart/cart.html | PASS | [link](docs/validation/js/js-test-cart.png "link") ||
+| app.js | profiles/static/profiles/js/countryfield.js | PASS | [link](docs/validation/js/js-test-country-field.png "link") ||
+| app.js | checkout/static/checkout/js/stripe_elements.js | PASS | [link](docs/validation/js/js-test-stripe-elments.png "link") ||
+
 
 \
 &nbsp; 

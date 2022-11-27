@@ -45,7 +45,8 @@ def add_to_cart(request, item_id):
             else:
                 cart[item_id] += quantity
                 messages.success(
-                    request, f'Updated {product.name} quantity to {cart[item_id]}'
+                    request, f'Updated {product.name} \
+                        quantity to {cart[item_id]}'
                 )
     else:
         cart[item_id] = quantity
@@ -66,7 +67,8 @@ def adjust_cart(request, item_id):
         if quantity > 9999:
             cart[item_id] = 9999
             messages.warning(
-                request, f'Updated {product.name} quantity to maximum allowed {cart[item_id]}'
+                request, f'Updated {product.name} quantity to \
+                    maximum allowed {cart[item_id]}'
             )
         else:
             cart[item_id] = quantity
