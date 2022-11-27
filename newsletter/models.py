@@ -15,4 +15,4 @@ class SubscribeNewsletter(models.Model):
         verbose_name = 'Newsletter Subscribers List'
 
     def __str__(self):
-        return str(self.email)
+        return str(self.newsletter_email)
