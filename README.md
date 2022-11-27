@@ -380,17 +380,6 @@ Customer supplied all images for the website. Kukladev asked for the images to b
 | image_url | | URLField | max_length=1024, null=True
 | image | | ImageField | null=True, blank=True
 
-\
-&nbsp;
-
-### ProductImage
-
-| Name | Key | Type | Other Details |
-| -- | -- | -- | --
-| product | FK (Product) | | null=True, blank=True, on_delete=models.SET_NULL
-| Title |  | CharField | max_length=254, null=True, unique=True, validators=[MinLengthValidator(3)]
-| image_url |  | ImageField | max_length=1024, null=True, blank=True
-| image |  | ImageField | null=True, blank=True
 
 \
 &nbsp;
@@ -458,18 +447,11 @@ Customer supplied all images for the website. Kukladev asked for the images to b
 | -- | -- | -- | --
 | email | ForeignKey | | null=True, blank=True, unique=True 
 
-### Brand
+### Brands
 | Name | Key | Type | Other Details
 | -- | -- | -- | --
 | name | | CharField | max_length=254, null=True, blank=True
-| image_url |  | ImageField | max_length=1024, null=True, blank=True
 | image |  | ImageField | null=True, blank=True 
-
-### SocialMedia
-| Name | Key | Type | Other Details
-| -- | -- | -- | --
-| name | | CharField |  null=True, blank=True
-| logo_tag |  | CharField | null=True, blank=True
 
 \
 &nbsp;
