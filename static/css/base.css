@@ -337,6 +337,10 @@ input, #id_default_country {
     font-size: 1.6rem;
 }
 
+.ul-nav {
+    display: flex;
+}
+
 .dropdown-item:hover {
     background: var(--amaranth);
     color: var(--white);
