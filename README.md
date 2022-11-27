@@ -552,6 +552,9 @@ Newly registered user will receive account verification email. There is a 24h ti
 ## Future developments
 
 There are a few ideas that I would like to implement in the future:
+* Allow user to save cart for later
+* Product reviews
+* Blog app
 * Additional user profiles and access levels -> administrator, manager, employee
 * Admin's ability to activate and deactivate accounts
 * Add to cart button on the product card in the product list view
@@ -561,7 +564,7 @@ There are a few ideas that I would like to implement in the future:
 * Stock levels view with visual cues about low, medium and high quantities in stock
 * Stock report informing about stock turnover rates per product and flag slow or non-selling products for sell-off or clearance deals
 * User profile picture
-* Ability to dectivate products without deleting their sales history
+* Ability to deactivate products without deleting their sales history
 * Ability to mass upload products using external data file i.e. excel file
 * Allow user to share product via social media
 * Allow user to add product to favourites
@@ -797,22 +800,21 @@ All HTML files were tested using browser's "View page source" function due to dj
 | [Issue #23](https://github.com/lukaszkukla/ventdes/issues/23 "Issue #23") | Carousel image partially hidden on mobile | Part of the hero image is hidden behind navbar on mobile devices.  |
 | [Issue #22](https://github.com/lukaszkukla/ventdes/issues/22 "Issue #22") | Unexpected keyword argument | Image on product card does not load.  |
 | [Issue #9](https://github.com/lukaszkukla/ventdes/issues/9 "Issue #9") | Navbar links are not aligning in center | Navbar links to other pages are aligned left.  |
-| [Issue #72](https://github.com/lukaszkukla/ventdes/issues/72 "Issue #72") | XXXXXXXXXXX | OOOOOOOOOOOOOOO  |
-| [Issue #72](https://github.com/lukaszkukla/ventdes/issues/72 "Issue #72") | XXXXXXXXXXX | OOOOOOOOOOOOOOO  |
-| [Issue #72](https://github.com/lukaszkukla/ventdes/issues/72 "Issue #72") | XXXXXXXXXXX | OOOOOOOOOOOOOOO  |
-| [Issue #72](https://github.com/lukaszkukla/ventdes/issues/72 "Issue #72") | XXXXXXXXXXX | OOOOOOOOOOOOOOO  |
-| [Issue #72](https://github.com/lukaszkukla/ventdes/issues/72 "Issue #72") | XXXXXXXXXXX | OOOOOOOOOOOOOOO  |
-| [Issue #72](https://github.com/lukaszkukla/ventdes/issues/72 "Issue #72") | XXXXXXXXXXX | OOOOOOOOOOOOOOO  |
 
 
 \
 &nbsp;
 
 ## Unfixed Bugs
-Description of the bug
+I have identified that all AllAuth templates are not aligned correctly. This is a minor bug that is visual and have no impact on the functionality of the website. Despite this I added it to the bug list to rectify in future. I have run out of time to have it corrected.
 
-
-* [Error #1 - with reference](docs/bugs/password-error-001.png "error name") error brief description [Error #1 - without reference](docs/bugs/error-001.png "password error") 
+* [Error #70 - with reference](https://github.com/lukaszkukla/ventdes/issues/70 "Issue #70")
+* [Error #71 - with reference](https://github.com/lukaszkukla/ventdes/issues/71 "Issue #71")
+* [Error #72 - with reference](https://github.com/lukaszkukla/ventdes/issues/72 "Issue #72")
+* [Error #73 - with reference](https://github.com/lukaszkukla/ventdes/issues/73 "Issue #73")
+* [Error #74 - with reference](https://github.com/lukaszkukla/ventdes/issues/74 "Issue #74")
+* [Error #75 - with reference](https://github.com/lukaszkukla/ventdes/issues/75 "Issue #75")
+* [Error #76 - with reference](https://github.com/lukaszkukla/ventdes/issues/76 "Issue #76")
 
 \
 &nbsp;
@@ -983,11 +985,11 @@ This project is using Gmail as its email provider. Other providers can be used b
 * [Simen Daehlin](https://github.com/Eventyret "Simen Daehlin") for advice and direction and continual support
 * [Sam Timmins](https://github.com/sam-timmins/ "Sam Timmins") for readme template, structure and some ideas that sparked from using it
 * Peer community on [Code Institute](https://codeinstitute.net/ie/) Slack channels
+* Tutor support [Code Institute](https://codeinstitute.net/ie/) Tutor support has been outstanding in helping to find and resolve issues (BIG thanks to Gemma, Joe, Ger and Jason)
 * Kasia_ci from [Code Institute](https://codeinstitute.net/ie/) - for keeping up the spirit and leading weekly standups
 * [Human Code](https://www.youtube.com/watch?v=X1gQB2BGJA8 "Reverse and Reverse_Lazy") - understand reverse and reverse_lazy
 * [CodingEntrepreneurs](https://www.youtube.com/channel/UCWEHue8kksIaktO8KTTN_zg "CodingEntrepreneurs") for help on Django and testing
-* [Codemy.com](https://www.youtube.com/channel/UCFB0dxMudkws1q8w5NJEAmw "Codemy.com") for help with Django
-* [Very Academy](https://www.youtube.com/watch?v=zszYgUXnId8 "Very Academy") for showing how to restric access to class based views 
+* [Codemy.com](https://www.youtube.com/channel/UCFB0dxMudkws1q8w5NJEAmw "Codemy.com") for help with Django 
 
 \
 &nbsp;
@@ -996,7 +998,11 @@ This project is using Gmail as its email provider. Other providers can be used b
 &nbsp;
 
 # Final Thoughts
-This is was so far the most challenging project I have done. Django is a really neat tool. I need more time to play with it to understand it better. Some in-built function are really great and really speed up the development time. Yet... 'with great tools come great learning curve' there were time that I was ready to give up but I kept going and I manage to bring this project to completion. It was the thoughest one but also most enjoyable one.
+The whole year espcially around the final project has been very demanding and challenging. Many sleepless nights and early mornings. The more I learnt the less I knew. The more I built the more challenging errors I came accross. Some say it's the end, I say it is only a beginnig of a new journey. Code Institute set me on a new path and showed me the way. I know there is a greater challenge ahead and more learning to come. The final project is far from finished. I have hundreds of ideas how to make it better. Unfortunately, this time of the year (last quarter) is the most bussiest time at work and I had to focus on building minimum viable product (MVP). I wish I had more time to add more features before submission. With that in mind I already have something to do once the final grading is completed. I will focus on outstanding stories and future developments list first ;-) I am glad that I can take some time off and catch a breate, have a bit of social life I missed last 12 months. I also look forward to get back to future projects reenergised and ready to implement more ideas.
+
+Code Insitute, BIG thanks! So far this was most enjoyable learning experince I had... and I have quite few in my portfolio. None of them are a match to your approach and support given!
+
+Thank you!
 
 \
 &nbsp;
