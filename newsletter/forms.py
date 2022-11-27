@@ -21,4 +21,6 @@ class SubscribeNewsletterForm(forms.ModelForm):
 
         super(SubscribeNewsletterForm, self).__init__(*args, **kwargs)
         self.fields['newsletter_email'].label = False
-        self.fields['newsletter_email'].widget.attrs.update({'placeholder': 'your@email.com'})
+        self.fields['newsletter_email'].widget.attrs.update(
+            {'placeholder': 'your@email.com'}
+        )

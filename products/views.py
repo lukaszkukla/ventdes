@@ -43,7 +43,9 @@ def all_products(request):
                 messages.error(request, "Please enter search keywords")
                 return redirect(reverse('products'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query) | Q(image__icontains=query) | Q(sku__icontains=query)
+            queries = Q(name__icontains=query) | Q(
+                description__icontains=query
+            ) | Q(image__icontains=query) | Q(sku__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
