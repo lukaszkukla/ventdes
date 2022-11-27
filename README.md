@@ -781,16 +781,43 @@ All HTML files were tested using browser's "View page source" function due to dj
 ### Python
 | File Name | File Path | Result | PEP8 | Comments |
 |--|--|--|--|--|
-| admin.py | XXXXXXXXXXX/admin.py | PASS | [link](docs/validation/python/admin.png "link") ||
-| apps.py | XXXXXXXXXXX/apps.py | PASS | [link](docs/validation/python/apps.png "link") ||
-| forms.py | XXXXXXXXXXX/forms.py | PASS | [link](docs/validation/python/forms.png "link") ||
-| models.py | XXXXXXXXXXX/models.py | PASS | [link](docs/validation/python/models.png "link") ||
-| urls.py | XXXXXXXXXXX/urls.py | PASS | [link](docs/validation/python/haz-urls.png "link") ||
-| views.py | XXXXXXXXXXX/views.py | PASS | [link](docs/validation/python/views.png "link") ||
-| asgi.py | XXXXXXXXXXX/asgi.py | PASS | [link](docs/validation/python/asgi.png "link") ||
-| settings.py | ventdes/settings.py | PASS | [link](docs/validation/python/settings.png "link") ||
-| urls.py | XXXXXXXXXXX/urls.py | PASS | [link](docs/validation/python/urls.png "link") ||
-| wsgi.py | XXXXXXXXXXX/wsgi.py | PASS | [link](docs/validation/python/wsgi.png "link") ||
+| contexts.py | cart/contexts.py | PASS | [link](docs/validation/python/py-test-cart-contexts.png "link") ||
+| forms.py | cart/urls.py | PASS | [link](docs/validation/python/py-test-cart-urls.png "link") ||
+| views.py | cart/views.py | PASS | [link](docs/validation/python/py-test-cart-views.png "link") ||
+| admin.py | checkout/admin.py | PASS | [link](docs/validation/python/py-test-checkout-admin.png "link") ||
+| forms.py | checkout/forms.py | PASS | [link](docs/validation/python/py-test-checkout-forms.png "link") ||
+| models.py | checkout/models.py | PASS | [link](docs/validation/python/py-test-checkout-models.png "link") ||
+| signals.py | checkout/signals.py | PASS | [link](docs/validation/python/py-test-checkout-signals.png "link") ||
+| urls.py | checkout/urls.py | PASS | [link](docs/validation/python/py-test-checkout-urls.png "link") ||
+| views.py | checkout/views.py | PASS | [link](docs/validation/python/py-test-checkout-views.png "link") ||
+| webhook_handler.py | checkout/webhook_handler.py | PASS | [link](docs/validation/python/py-test-checkout-webhook_handler.png "link") ||
+| webhooks.py | checkout/webhooks.py | PASS | [link](docs/validation/python/py-test-checkout-webhooks.png "link") ||
+| forms.py | contact/forms.py | PASS | [link](docs/validation/python/py-test-contact-forms.png "link") ||
+| views.py | contact/views.py | PASS | [link](docs/validation/python/py-test-contact-views.png "link") ||
+| urls.py | home/urls.py | PASS | [link](docs/validation/python/py-test-home-urls.png "link") ||
+| views.py | home/views.py | PASS | [link](docs/validation/python/py-test-home-views.png "link") ||
+| admin.py | newsletter/admin.py | PASS | [link](docs/validation/python/py-test-newsletter-admin.png "link") ||
+| contexts.py | newsletter/contexts.py | PASS | [link](docs/validation/python/py-test-newsletter-contexts.png "link") ||
+| forms.py | newsletter/forms.py | PASS | [link](docs/validation/python/py-test-newsletter-forms.png "link") ||
+| models.py | newsletter/models.py | PASS | [link](docs/validation/python/py-test-newsletter-models.png "link") ||
+| urls.py | newsletter/urls.py | PASS | [link](docs/validation/python/py-test-newsletter-urls.png "link") ||
+| views.py | newsletter/views.py | PASS | [link](docs/validation/python/py-test-newsletter-views.png "link") ||
+| views.py | policy/views.py | PASS | [link](docs/validation/python/py-test-policy-views.png "link") ||
+| admin.py | products/admin.py | PASS | [link](docs/validation/python/py-test-products-admin.png "link") ||
+| apps.py | products/apps.py | PASS | [link](docs/validation/python/py-test-products-apps.png "link") ||
+| forms.py | products/forms.py | PASS | [link](docs/validation/python/py-test-products-forms.png "link") ||
+| models.py | products/models.py | PASS | [link](docs/validation/python/py-test-products-models.png "link") ||
+| urls.py | products/urls.py | PASS | [link](docs/validation/python/py-test-products-urls.png "link") ||
+| views.py | products/views.py | PASS | [link](docs/validation/python/py-test-products-views.png "link") ||
+| widgets.py | products/widgets.py | PASS | [link](docs/validation/python/py-test-products-widgets.png "link") ||
+| models.py | profiles/models.py | PASS | [link](docs/validation/python/py-test-profiles-models.png "link") ||
+| forms.py | profiles/forms.py | PASS | [link](docs/validation/python/py-test-profiles-forms.png "link") ||
+| urls.py | profiles/urls.py | PASS | [link](docs/validation/python/py-test-profiles-urls.png "link") ||
+| views.py | profiles/views.py | PASS | [link](docs/validation/python/py-test-profiles-views.png "link") ||
+| urls.py | ventdes/urls.py | PASS | [link](docs/validation/python/py-test-ventdes-urls.png "link") ||
+| views.py | ventdes/views.py | PASS | [link](docs/validation/python/py-test-ventdes-views.png "link") ||
+| custom_storages.py | custom_storages.py | PASS | [link](docs/validation/python/py-test-custom_storages.png "link") ||
+
 
 \
 &nbsp; 
